@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.set</RootNamespace>
+    <AssemblyName>nilnul._set_._LIB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'git|AnyCPU'">
+    <OutputPath>bin\git\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Symbols4Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Symbol|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.220818.45643\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="%28matrix\matrix\Dimension.cs" />
+    <Compile Include="%28matrix\matrix\be_\Square - 复制.cs" />
+    <Compile Include="%28matrix\matrix\be_\TwoByThree.cs" />
+    <Compile Include="%28matrix\matrix\duo\be_\SameDimension.cs" />
+    <Compile Include="%28matrix\matrix\Extensions.cs" />
+    <Compile Include="%28matrix\matrix\be\BeI - 复制.cs" />
+    <Compile Include="%28matrix\matrix\be\En - 复制.cs" />
+    <Compile Include="%28matrix\matrix\Duo.cs" />
+    <Compile Include="%28matrix\matrix\duo\BeI.cs" />
+    <Compile Include="%28matrix\matrix\duo\be_\Associable.cs" />
+    <Compile Include="%28matrix\matrix\duo_\associable\InnerProduct.cs" />
+    <Compile Include="%28matrix\matrix\FroX.cs" />
+    <Compile Include="%28matrix\matrix\fro_\Demension.cs" />
+    <Compile Include="%28matrix\matrix\fro_\Str.cs" />
+    <Compile Include="%28matrix\matrix\op_\Del.cs" />
+    <Compile Include="%28matrix\matrix\op_\Sel.cs" />
+    <Compile Include="%28matrix\matrix\str\BeI.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\Started.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\Productable.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\StartedProductable.cs" />
+    <Compile Include="%28matrix\matrix\str_\startedProductable\AggregateI.cs" />
+    <Compile Include="%28matrix\matrix\str_\startedProductable\Aggregate.cs" />
+    <Compile Include="%28matrix\matrix\to_\Dim.cs" />
+    <Compile Include="%28matrix\matrix_\%28retiring\NewFolder1\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\be_\OrderTwo.cs" />
+    <Compile Include="%28matrix\matrix_\square_\of_\Bit.cs" />
+    <Compile Include="%28matrix\_matrix\Dimension.cs" />
+    <Compile Include="%28matrix\_matrix\dimension_\OfInt.cs" />
+    <Compile Include="%28partition\Partition%28T.cs" />
+    <Compile Include="%28partition\Partition.cs" />
+    <Compile Include="Albebra.cs" />
+    <Compile Include="algebra_\CoBiop.cs" />
+    <Compile Include="algebra_\cobiop_\deltaConcur_\plural_\DistributiveXpn.cs" />
+    <Compile Include="algebra_\cobiop_\DeltaInter.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\Dwelt.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng_\ring\Complete.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng_\ring_\plural_\hasDisjointDwelt_\DomainXpn.cs" />
+    <Compile Include="algebra_\cobiop_\orand_\semiring_\Rig.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring\el\be_\Idempotent.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring\el\be_\Unipotent.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\Commutative.cs" />
+    <Compile Include="algebra_\cobiop_\ring\Subring.cs" />
+    <Compile Include="algebra_\cobiop_\ring\sub_\LeftIdeal.cs" />
+    <Compile Include="algebra_\cobiop_\ring_\Domain.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\HasNilDiv.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\NilUninversible.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\Plural.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\commutative_\Nondomain.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\Doublet.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\Noncommute.cs" />
+    <Compile Include="algebra_\cobiop_\ring_\domain_\Field.cs" />
+    <Compile Include="algebra_\cobiop_\lattice_\Free.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring\el\be_\Nilpotent.cs" />
+    <Compile Include="algebra_\Normal.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\Empty.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\Monoid.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\monoid_\EmptyXpn.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\monoid_\Grp.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\monoid_\grp_\Abelian.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\Rng.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\Rig.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\Ring.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\commutative_\Domain.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\ZeroOnly.cs" />
+    <Compile Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\Field.cs" />
+    <Compile Include="algebra_\cobiop_\deltaConcur_\Rng.cs" />
+    <Compile Include="algebra_\cobiop_\DeltaEquiv.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect\be_\Rng.cs" />
+    <Compile Include="be_\Singleton.cs" />
+    <Compile Include="choose_\multi_\result\count\GenFun.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\count_\InNegCombi.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\count_\Recur.cs" />
+    <Compile Include="choose_\Subset.cs" />
+    <Compile Include="choose_\multi_\Bag.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\Count.cs" />
+    <Compile Include="choose_\subsets\count\SetCountNeg.cs" />
+    <Compile Include="Enclosed.cs" />
+    <Compile Include="family\Algebra.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\Rng.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng\be_\Ring.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng_\Ring.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng_\ring_\Commutative.cs" />
+    <Compile Include="algebra_\cobiop_\deltaSect_\rng_\ring_\plural_\hasDisjointDwelt_\FieldXpn.cs" />
+    <Compile Include="algebra_\cobiop_\orand\be_\RingXpn.cs" />
+    <Compile Include="algebra_\cobiop_\orand_\ring_\FieldXpn.cs" />
+    <Compile Include="algebra_\cobiop_\orand\be_\OrMonoid.cs" />
+    <Compile Include="algebra_\cobiop_\orand_\Semiring.cs" />
+    <Compile Include="algebra_\cobiop_\UnionInter.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\dwelt_\Magma.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\dwelt_\magma_\Monoid.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\dwelt_\magma_\monoid_\NongrpXpn.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\Magma.cs" />
+    <Compile Include="algebra_\pargoid_\Concur.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\magma_\Empty.cs" />
+    <Compile Include="algebra_\pargoid_\concur_\magma_\Monoid.cs" />
+    <Compile Include="algebra_\pargoid_\delta\Be%28ofFamily.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\dwelt_\Magma_byIndex.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\Magma_byIndex.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\Magma_byCombi.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\Magma.cs" />
+    <Compile Include="algebra_\pargoid_\DeltaI.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\magma_\semigrp_\monoid_\EmptyXpn.cs" />
+    <Compile Include="algebra_\pargoid_\delta_\dwelt_\Magma.cs" />
+    <Compile Include="algebra_\pargoid_\delta_\dwelt_\magma_\NonabelianXpn.cs" />
+    <Compile Include="algebra_\pargoid_\delta_\magma_\monoid_\Abelian.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\Semigrp.cs" />
+    <Compile Include="algebra_\Pseudoring.cs" />
+    <Compile Include="algebra_\Pargoid.cs" />
+    <Compile Include="family\be_\Cover.cs" />
+    <Compile Include="family\be_\Dwelt.cs" />
+    <Compile Include="algebra_\pargoid_\delta\be_\dwelt_\magma_\Abelian.cs" />
+    <Compile Include="family\Eq.cs" />
+    <Compile Include="family\eq_\Defaulted.cs" />
+    <Compile Include="algebra_\IPargoid.cs" />
+    <Compile Include="family\op_\of_\constant_\Pow.cs" />
+    <Compile Include="family\op_\of_\set_\Combinate - Copy.cs" />
+    <Compile Include="family\op_\of_\set_\Combinate.cs" />
+    <Compile Include="co_\Union%28T,Eq .cs" />
+    <Compile Include="family\Be.cs" />
+    <Compile Include="family\be\Vow.cs" />
+    <Compile Include="family\be\vow_\BeDefaulted.cs" />
+    <Compile Include="family\be_\Disjoint - Copy.cs" />
+    <Compile Include="family\be_\disjoint\Vow.cs" />
+    <Compile Include="family\be_\disjoint\vow\Ee.cs" />
+    <Compile Include="family\be_\disjoint\vow\En%28T,TEq.cs" />
+    <Compile Include="family\be_\disjoint_\ByRecur.cs" />
+    <Compile Include="family\be_\disjoint_\EqDefaulted.cs" />
+    <Compile Include="family\be_\EqDefaulted.cs" />
+    <Compile Include="family\be_\Field.cs" />
+    <Compile Include="family\be_\Topo.cs" />
+    <Compile Include="family\OpI.cs" />
+    <Compile Include="family\op_\nary_\Constant.cs" />
+    <Compile Include="family\op_\nary_\Ctor.cs" />
+    <Compile Include="family\op_\of_\set_\combinate_\byLoop_\_yield\Checklist.cs" />
+    <Compile Include="family\op_\of_\set_\combinate_\ByIndex.cs" />
+    <Compile Include="algebra_\pargoid_\Magma.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\IMonoid.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\Intersect.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar\be_\Monoid.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar_\monoid\be_\GrpXpn.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\Union.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\unionar\be_\Monoid.cs" />
+    <Compile Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\unionar_\monoid\be_\GrpXpn.cs" />
+    <Compile Include="family\Univ.cs" />
+    <Compile Include="family_\HasNoEmpty.cs" />
+    <Compile Include="family_\ring\op_\of_\family_\Generate.cs" />
+    <Compile Include="family_\ring\op_\of_\set_\PowerSet.cs" />
+    <Compile Include="family_\ring_\Sigma.cs" />
+    <Compile Include="family_\ring_\Singleton.cs" />
+    <Compile Include="Has.cs" />
+    <Compile Include="nilnul0\ISet.cs" />
+    <Compile Include="nilnul0\obj\Set.cs" />
+    <Compile Include="co_\sameEq_\xpn_\EqNotSame.cs" />
+    <Compile Include="Op.cs" />
+    <Compile Include="op_\binary\co_\comple_\ConcurDelta.cs" />
+    <Compile Include="op_\binary\co_\Complement.cs" />
+    <Compile Include="op_\binary\co_\Morgan.cs" />
+    <Compile Include="op_\binary_\Concur_ofComple.cs" />
+    <Compile Include="op_\binary_\concur\Cumulator.cs" />
+    <Compile Include="op_\binary_\concur\cumulator\be_\Unard.cs" />
+    <Compile Include="op_\binary_\concur\cumulator\Cumulate.cs" />
+    <Compile Include="op_\binary_\concur_\ByDuaDeltal.cs" />
+    <Compile Include="op_\binary_\except\Subsume.cs" />
+    <Compile Include="op_\binary_\sect\cumulator\Cumulate.cs" />
+    <Compile Include="op_\UnaryI.cs" />
+    <Compile Include="op_\binary_\Concur.cs" />
+    <Compile Include="op_\binary_\Concur%28class.cs" />
+    <Compile Include="op_\IUnary.cs" />
+    <Compile Include="op_\NewFolder1\Op.cs" />
+    <Compile Include="op_\NewFolder1\Binary.cs" />
+    <Compile Include="op_\binary_\delta\cumulator\Cumulate.cs" />
+    <Compile Include="op_\binary_\SymDif.cs" />
+    <Compile Include="nilnul0\set_\dwelt\family\be_\Cover.cs" />
+    <Compile Include="op_\BinaryI.cs" />
+    <Compile Include="op_\binary_\ElEqDefault.cs" />
+    <Compile Include="op_\binary_\delta_\MemberEqDefault.cs" />
+    <Compile Include="op_\binary_\IDelta.cs" />
+    <Compile Include="op_\binary_\_DeltaX.cs" />
+    <Compile Include="op_\IBinary.cs" />
+    <Compile Include="op_\unary_\Complement.cs" />
+    <Compile Include="op_\unary_\IComplement.cs" />
+    <Compile Include="_algebra_\Set.cs" />
+    <Compile Include="_algebra_\Ops.cs" />
+    <Compile Include="_has\Collection.cs" />
+    <Compile Include="nilnul0\_set_\Has.cs" />
+    <Compile Include="op_\binary_\delta\be_\Associative.cs" />
+    <Compile Include="op_\binary_\delta\be_\Commutative.cs" />
+    <Compile Include="op_\binary_\delta\Cumulator.cs" />
+    <Compile Include="Permutate.cs" />
+    <Compile Include="permutate_\ByLoop.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\_indexes\_next\Comparer.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\~\Indexes - 复制.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\Indexes.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\_indexes\Next.cs" />
+    <Compile Include="permutate_\permutate~\ByLoop.cs" />
+    <Compile Include="permutate_\permutate~\_PermutateX - Copy.cs" />
+    <Compile Include="family\NewFolder1\Union - Copy.cs" />
+    <Compile Include="family\Sect.cs" />
+    <Compile Include="family\Unite.cs" />
+    <Compile Include="family\Vow.cs" />
+    <Compile Include="family\vow\Ee.cs" />
+    <Compile Include="family\vow\ee_\VowDefaulted.cs" />
+    <Compile Include="family_\eqDef~\Family%28T,TEq - Copy.cs" />
+    <Compile Include="family_\Ring.cs" />
+    <Compile Include="nilnul0\sets\Topo.cs" />
+    <Compile Include="nilnul0\set_\empty\members\be_\All.cs" />
+    <Compile Include="nilnul0\str\cord\Eq.cs" />
+    <Compile Include="nilnul0\str\cord\eq_\Defaulted.cs" />
+    <Compile Include="nilnul0\_set_\BlankI.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\ContainsI.cs" />
+    <Compile Include="be\adjectives1\adjectives\decorated\FiniteSet.cs" />
+    <Compile Include="be\adjectives1\adjectives\decorated\SingletonSet.cs" />
+    <Compile Include="be\adjectives1\adjectives\Empty.cs" />
+    <Compile Include="be\adjectives1\adjectives\EmptyAssert.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Assertion%28TElement,TSetSingleton.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Assertion%28TElement.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\CardinalX.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\ClassOfSets.cs" />
+    <Compile Include="combinate~\NewFolder1\Combinate.cs" />
+    <Compile Include="nilnul0\set_\EmptySet%28T.cs" />
+    <Compile Include="nilnul0\set_\EmptySet.cs" />
+    <Compile Include="nilnul0\set_\EmptySetI %2812%29.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\EmptyX.cs" />
+    <Compile Include="eq\Eq%28T,TEq%29.cs" />
+    <Compile Include="eq\EqContext%28T,TEq.cs" />
+    <Compile Include="eq\EqualityComparer_byFunc%28T.cs" />
+    <Compile Include="eq\EqualsX.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Field.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\InductiveI.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\InfinityI.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\IsHashSet.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Literal.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\NonEmptyEnumerable%28T.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\NonEmptyX.cs" />
+    <Compile Include="%28matrix\MatrixI.cs" />
+    <Compile Include="%28matrix\matrix\BeI.cs" />
+    <Compile Include="%28matrix\matrix\be\En.cs" />
+    <Compile Include="%28matrix\matrix\be_\Duos.cs" />
+    <Compile Include="%28matrix\matrix\be_\Square.cs" />
+    <Compile Include="family_\EqDefaulted%28T,TEq.cs" />
+    <Compile Include="Family.cs" />
+    <Compile Include="nilnul0\obj\_table\Table.cs" />
+    <Compile Include="nilnul0\nilnul.obj.table\Row.cs" />
+    <Compile Include="nilnul0\nilnul.obj.table\Rows.cs" />
+    <Compile Include="family\be_\_DisjointX.cs" />
+    <Compile Include="nilnul0\str\Set.cs" />
+    <Compile Include="nilnul0\str\set\co\ply_\multi_\_ByX.cs" />
+    <Compile Include="nilnul0\str\set\co\ply_\_MultiX.cs" />
+    <Compile Include="nilnul0\str\set\op_\Binary.cs" />
+    <Compile Include="nilnul0\_set_\ElEqA.cs" />
+    <Compile Include="op_\binary_\Intersect.cs" />
+    <Compile Include="op_\binary_\Union.cs" />
+    <Compile Include="op_\binary_\Except1.cs" />
+    <Compile Include="Phrase.cs" />
+    <Compile Include="_family_\ElEq.cs" />
+    <Compile Include="_family_\elEq\MemberEq.cs" />
+    <Compile Include="_family_\elEq_\EqDefaulted.cs" />
+    <Compile Include="permutate_\permutate~\_PermutateX.cs" />
+    <Compile Include="permutate_\permutate~\Permutate.cs" />
+    <Compile Include="re_\Inc.cs" />
+    <Compile Include="re_\In.cs" />
+    <Compile Include="re_\_disjoint_\Disjoint.cs" />
+    <Compile Include="re_\_joint_\Joint.cs" />
+    <Compile Include="aggregate_\%28retiring\Union%28T,Eq .cs" />
+    <Compile Include="aggregate_\Union.cs" />
+    <Compile Include="nilnul0\str\AggregateI.cs" />
+    <Compile Include="nilnul0\str\duo\BeI.cs" />
+    <Compile Include="nilnul0\str\duo\be_\SameLength.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\of_\bit\InnerProduct.cs" />
+    <Compile Include="%28matrix\matrix\duo_\sameDim\of_\bit\combine_\Subtract.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\Zip.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\ZipSum.cs" />
+    <Compile Include="op_\op\BinaryI.cs" />
+    <Compile Include="op_\expr\expr\Binary.cs" />
+    <Compile Include="op_\expr\expr\BinaryI.cs" />
+    <Compile Include="op_\expr\expr\Union%28T.cs" />
+    <Compile Include="op_\expr\expr\Union2%28T,Eq .cs" />
+    <Compile Include="op_\op\SuccessorX.cs" />
+    <Compile Include="op_\op\Union%28T,Eq .cs" />
+    <Compile Include="op_\op\Union.cs" />
+    <Compile Include="op_\op\Xor.cs" />
+    <Compile Include="Partite.cs" />
+    <Compile Include="partite_\EqDefault.cs" />
+    <Compile Include="prop\Empty%28T,TEq.cs" />
+    <Compile Include="prop\Singleton.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Recursive.cs" />
+    <Compile Include="re_\rel\Disjoint%28T,TEq.cs" />
+    <Compile Include="re_\rel\Joint%28T,TEq.cs" />
+    <Compile Include="re_\rel\ProperSubset%28T,TEq.cs" />
+    <Compile Include="re_\rel\Subset.cs" />
+    <Compile Include="re_\rel\Subset2.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set%28T,TEq%29.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetByPredicate%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI2%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_ElementEqStatic%28T,TEq%29.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_hashSet%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_hashSetX%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Set_ofAllInstances%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Set_withStaticElementEq%28T,TEq.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\SigmaAlgebra %2821%29.cs" />
+    <Compile Include="family\be_\_disjoint_\Disjoint%28T,TEq.cs" />
+    <Compile Include="family\be_\_disjoint_\Disjoint_set%28T,TEq.cs" />
+    <Compile Include="family\PartialPartition%28T,TEq,TUniv.cs" />
+    <Compile Include="family\PartialPartition%28T,TEq.cs" />
+    <Compile Include="family\Partition%28T,TEq.cs" />
+    <Compile Include="_family_\Set%28T,TEq.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\_slew\Contain.cs" />
+    <Compile Include="_has_\Has.cs" />
+    <None Include="%28froOldPrj\%28froOldPrjSet\TostrX.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\ToStrX2.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI%28T%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI_randomSelect.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\Hashset%28T%29 as FiniteSet%28T%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\HashSet%28T,IEqualityCompaer%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\set.Set_FroHashSet%28T%28defaultEq.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI2%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI3%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\Set_hashSetX%28T.cs" />
+    <Compile Include="be\adjectives1\EmptyX.cs" />
+    <Compile Include="be\adjectives1\Finite.cs" />
+    <Compile Include="be\adjectives1\Singleton.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Algebra.cs" />
+    <Compile Include="%28matrix\matrix\op_\Cast.cs" />
+    <Compile Include="%28matrix\matrix\to_\Txt.cs" />
+    <Compile Include="%28matrix\matrix_\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\Square%28T%29X.cs" />
+    <Compile Include="%28matrix\matrix_\square\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\Symmetry%28static.cs" />
+    <Compile Include="nilnul0\str\arr\Repeat.cs" />
+    <Compile Include="be\Positive%28TElement.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Class.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\ContainsI%28T%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Dict.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptyEnumerableX.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptySetI %2812%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptyX.cs" />
+    <Compile Include="nilnul0\nilnul.seq\enumerable\be\Positive%28TElement.cs" />
+    <Compile Include="nilnul0\nilnul.seq\enumerable\Eq%28T,TEq.cs" />
+    <Compile Include="nilnul0\nilnul.seq\enumerable\Eq%28T.cs" />
+    <Compile Include="nilnul0\nilnul.seq\enumerable\Positive%28TElement.cs" />
+    <Compile Include="eq\NewFolder1\Equal%28nilnul.collection.cs" />
+    <Compile Include="eq\NewFolder1\Equal.cs" />
+    <Compile Include="eq\NewFolder1\EqualityComparer.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IEnumerableIndexOfExtension.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IndexSet.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\InductiveI.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\InfinityI.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IsElementOf_Extensions %2813%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\ListX.cs" />
+    <Compile Include="%28matrix\_matrix\NewFolder1\Dimension.cs" />
+    <Compile Include="%28matrix\matrix\duo\be\Associable.cs" />
+    <Compile Include="%28matrix\matrix\IntToBoolMatrix.cs" />
+    <Compile Include="%28matrix\matrix\Matrix%28static.cs" />
+    <Compile Include="%28matrix\matrix\Matrix%28T.cs" />
+    <Compile Include="%28matrix\matrix\MatrixX.cs" />
+    <Compile Include="%28matrix\matrix\op\AllX.cs" />
+    <Compile Include="%28matrix\matrix\rel\EqX.cs" />
+    <Compile Include="%28matrix\matrix\to\RowsX.cs" />
+    <Compile Include="%28matrix\matrix\to\Txt.cs" />
+    <Compile Include="%28matrix\matrix\be_\_be\Square %28%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\NonEmptyEnumerable%28T.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\NonEmptyX.cs" />
+    <Compile Include="combinate~\Combinate.cs" />
+    <Compile Include="op_\Compliment %28100%29.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\Difference %2813%29.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\DifferenceI.cs" />
+    <Compile Include="op_\expr\Union2%28T,Eq .cs" />
+    <Compile Include="op_\expr\Union2%28T.cs" />
+    <Compile Include="op_\IEqual.cs" />
+    <Compile Include="op_\IntersectI.cs" />
+    <Compile Include="op_\Intersection.cs" />
+    <Compile Include="op_\IProperSubSet.cs" />
+    <Compile Include="op_\IProperSuperSet.cs" />
+    <Compile Include="op_\ISuperSet %2813%29.cs" />
+    <Compile Include="op_\ProductExprI.cs" />
+    <Compile Include="op_\ProductI.cs" />
+    <Compile Include="op_\SetOpA.cs" />
+    <None Include="App.config" />
+    <None Include="op_\SigmaAlgebra.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\Subtract.cs" />
+    <Compile Include="op_\SuperSet.cs" />
+    <Compile Include="op_\UnionExprI%28TElement%29.cs" />
+    <Compile Include="op_\UnionFinite.cs" />
+    <Compile Include="family\op_\of_\constant_\PowerSetX.cs" />
+    <Compile Include="prop\property1\Discrete.cs" />
+    <Compile Include="prop\property1\IContinuous.cs" />
+    <Compile Include="prop\property1\IDense.cs" />
+    <Compile Include="prop\property1\IndexSet.cs" />
+    <Compile Include="prop\property1\OrderExpr_I.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Recursive.cs" />
+    <Compile Include="re_\Disjoint.cs" />
+    <Compile Include="re_\Joint.cs" />
+    <Compile Include="re_\ProperSubset.cs" />
+    <Compile Include="re_\relation\Subset.cs" />
+    <Compile Include="re_\Subset.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\SequenceX.cs" />
+    <Compile Include="nilnul0\nilnul.seq\EmptyForIEnumerable%28TElement.cs" />
+    <Compile Include="Cardinal.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\StrI.cs" />
+    <Compile Include="nilnul0\str\Duo.cs" />
+    <Compile Include="nilnul0\str\to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\TostrX.cs" />
+    <Compile Include="to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\TypeInstancesSet.cs" />
+    <Compile Include="tupl\Sum.cs" />
+    <Compile Include="tupl\to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\X.cs" />
+    <Compile Include="%28matrix\_matrix\Promote.cs" />
+    <Compile Include="family\op_\of_\set_\Pow.cs" />
+    <Compile Include="nilnul0\str\array\X.cs" />
+    <Compile Include="Headed.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Contain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="X.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="%28froOldPrj\.exclude\NewFolder1\" />
+    <Folder Include="%28matrix\matrix\%28retiring\" />
+    <Folder Include="%28matrix\matrix\duo_\associable\op_\" />
+    <Folder Include="%28matrix\matrix\fro_\str_\" />
+    <Folder Include="%28matrix\matrix_\square\duo\be_\" />
+    <Folder Include="%28matrix\matrix_\square\duo_\sameDim\combine_\" />
+    <Folder Include="%28matrix\matrix_\square\fro_\" />
+    <Folder Include="%28matrix\matrix_\square_\of_\bit\" />
+    <Folder Include="%28op%29\" />
+    <Folder Include="algebra_\cobiop\be_\" />
+    <Folder Include="algebra_\cobiop_\deltaConcur_\rng_\ring_\" />
+    <Folder Include="algebra_\cobiop_\deltaConcur_\singleton_\" />
+    <Folder Include="algebra_\cobiop_\dwelt_\" />
+    <Folder Include="algebra_\cobiop_\lattice_\multiton_\" />
+    <Folder Include="algebra_\cobiop_\ring\sub\" />
+    <Folder Include="algebra_\cobiop_\ring_\domain_\field_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\denumerable_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\domain_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\nonnil_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\commutative_\domain_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\plural_\nilUninversbile\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\ring_\singular_\" />
+    <Folder Include="algebra_\cobiop_\semiring_\rng_\semiring\" />
+    <Folder Include="algebra_\pargoid_\concur\" />
+    <Folder Include="algebra_\pargoid_\concur_\dwelt_\magma_\monoid_\grp_\" />
+    <Folder Include="algebra_\pargoid_\concur_\magma_\monoid_\" />
+    <Folder Include="algebra_\pargoid_\delta_\abelian\" />
+    <Folder Include="algebra_\pargoid_\delta_\abelian_\" />
+    <Folder Include="algebra_\pargoid_\magma\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp_\dwelt_\monoid_\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp_\monoid\el\be_\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar_\monoid\be_\field\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\monoid_\field_\" />
+    <Folder Include="algebra_\pargoid_\magma_\semigrp_\semigrp_\unionar_\monoid\be_\field\" />
+    <Folder Include="be\adjectives1\decorated\" />
+    <Folder Include="choose_\bags\" />
+    <Folder Include="choose_\multi_\result_\count\" />
+    <Folder Include="choose_\multi_\result_\count_\fixeds\count\" />
+    <Folder Include="choose_\multi_\result_\count_\fixed\" />
+    <Folder Include="family\algebra\" />
+    <Folder Include="family\be_\disjoint_\NewFolder1\" />
+    <Folder Include="family\be_\field_\" />
+    <Folder Include="family\op_\of_\ctor_\" />
+    <Folder Include="family\op_\of_\set_\combinate_\byLoop_\_yield\_checklist\" />
+    <Folder Include="family_\hasNoEmpty_\" />
+    <Folder Include="family_\ring\op_\NewFolder1\" />
+    <Folder Include="nilnul0\nilnul.obj.table\op_\" />
+    <Folder Include="nilnul0\nilnul.obj.table\row\" />
+    <Folder Include="nilnul0\obj\sets\" />
+    <Folder Include="nilnul0\obj\set\co_\" />
+    <Folder Include="nilnul0\obj\set\op_\binary\" />
+    <Folder Include="nilnul0\obj\set\op_\binary_\delta\" />
+    <Folder Include="nilnul0\sets\be_\" />
+    <Folder Include="nilnul0\sets\topo\" />
+    <Folder Include="nilnul0\set_\empty\be_\" />
+    <Folder Include="nilnul0\str\echelon\" />
+    <Folder Include="nilnul0\str\of_\" />
+    <Folder Include="nilnul0\_set\" />
+    <Folder Include="op_\binary\co_\comple_\concurDelta\" />
+    <Folder Include="op_\binary\co_\morgan\theorem_\" />
+    <Folder Include="op_\binary_\delta\cumulator\be_\" />
+    <Folder Include="op_\binary_\elEqDefault_\" />
+    <Folder Include="op_\binary_\except\NewFolder1\" />
+    <Folder Include="op_\binary_\except\NewFolder2\" />
+    <Folder Include="op_\expr\.expr\" />
+    <Folder Include="op_\expr\expr\expr\" />
+    <Folder Include="structure\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

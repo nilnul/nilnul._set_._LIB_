@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nilnul._set_._LIB_", "nilnul._set_._LIB_.csproj", "{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		git|Any CPU = git|Any CPU
+		Hbue40|Any CPU = Hbue40|Any CPU
+		PreferChinese|Any CPU = PreferChinese|Any CPU
+		Release_PreferChinese|Any CPU = Release_PreferChinese|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Symbol|Any CPU = Symbol|Any CPU
+		Symbols4Debug|Any CPU = Symbols4Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.git|Any CPU.ActiveCfg = git|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.git|Any CPU.Build.0 = git|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Hbue40|Any CPU.ActiveCfg = Hbue40|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Hbue40|Any CPU.Build.0 = Hbue40|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.PreferChinese|Any CPU.ActiveCfg = PreferChinese|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.PreferChinese|Any CPU.Build.0 = PreferChinese|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Release_PreferChinese|Any CPU.ActiveCfg = Release_PreferChinese|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Release_PreferChinese|Any CPU.Build.0 = Release_PreferChinese|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Symbol|Any CPU.ActiveCfg = Symbol|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Symbol|Any CPU.Build.0 = Symbol|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Symbols4Debug|Any CPU.ActiveCfg = Symbols4Debug|Any CPU
+		{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}.Symbols4Debug|Any CPU.Build.0 = Symbols4Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C513AA1F-FBC1-4999-83CF-326589C9F364}
+	EndGlobalSection
+EndGlobal
