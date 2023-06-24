@@ -10,7 +10,9 @@ namespace nilnul.set._has_
 	/// has a member
 	/// </summary>
 	/// <remarks>
-	/// Logician George Boolos strongly urged that "contains" be used for membership only, and "includes" for the subset relation only. [4]
+	/// Logician George Boolos strongly urged that "contains" be used for membership only, and "includes" for the subset relation only.
+	/// Set has a memeber
+	/// member is in Set;
 	/// </remarks>
 	public interface HasI<T>
 		:_has.CollectionI<T>

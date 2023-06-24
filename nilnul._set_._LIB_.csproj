@@ -103,16 +103,30 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._bit_._LIB_,Version=1.1.230415.233652-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._bit_._LIB_.1.1.230415.233652-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.220818.45643\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._obj_._LIB_,Version=1.2.230509.145521-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._obj_._LIB_.1.2.230509.145521-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -122,8 +136,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    <Reference Include="_nilnul_._LIB_,Version=1.1.230415.182959-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LIB_.1.1.230415.182959-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +217,7 @@
     <Compile Include="choose_\multi_\Bag.cs" />
     <Compile Include="choose_\multi_\result_\count_\fixeds\Count.cs" />
     <Compile Include="choose_\subsets\count\SetCountNeg.cs" />
+    <Compile Include="co\to_\quotient_\JaccardIndex.cs" />
     <Compile Include="Enclosed.cs" />
     <Compile Include="family\Algebra.cs" />
     <Compile Include="algebra_\cobiop_\deltaSect_\Rng.cs" />
@@ -277,6 +292,8 @@
     <Compile Include="family_\ring_\Sigma.cs" />
     <Compile Include="family_\ring_\Singleton.cs" />
     <Compile Include="Has.cs" />
+    <Compile Include="ICarte.cs" />
+    <Compile Include="IDes.cs" />
     <Compile Include="nilnul0\ISet.cs" />
     <Compile Include="nilnul0\obj\Set.cs" />
     <Compile Include="co_\sameEq_\xpn_\EqNotSame.cs" />
@@ -308,6 +325,9 @@
     <Compile Include="op_\IBinary.cs" />
     <Compile Include="op_\unary_\Complement.cs" />
     <Compile Include="op_\unary_\IComplement.cs" />
+    <Compile Include="permutate\representation_\CycleRepresentation.cs" />
+    <Compile Include="re_\include\IConverse.cs" />
+    <Compile Include="re_\ISupset.cs" />
     <Compile Include="_algebra_\Set.cs" />
     <Compile Include="_algebra_\Ops.cs" />
     <Compile Include="_has\Collection.cs" />
@@ -619,6 +639,9 @@
     <Folder Include="op_\expr\expr\expr\" />
     <Folder Include="structure\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="PostBuildMacros">
     <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
@@ -663,6 +686,11 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Dev2nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
 	)
 )</PostBuildEvent>
   </PropertyGroup>

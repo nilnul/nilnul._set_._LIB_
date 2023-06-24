@@ -14,6 +14,14 @@ namespace nilnul.set.re_
 	/// <remarks>
 	/// Logician George Boolos strongly urged that "contains" be used for membership only, and "includes" for the subset relation only. [4]
 	/// </remarks>
+	/// alias:
+	///		have
+	///			while as "has" means
+	///		sup
+	///		supset
+	///	vs:
+	///		consists of
+	///			all the members;
 	public interface IncI
 	{
 	}

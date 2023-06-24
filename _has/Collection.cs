@@ -25,6 +25,10 @@ namespace nilnul.set._has
 		/// ∈ means member of
 		/// ∉ is not member of
 		/// </remarks>
+		/// vs:
+		///		have
+		///			have many
+		///			have all given;
 		bool has(T member);
 	}
 	/// we can later extend this to infinite set, including discrete infinite, continuum and beyond.

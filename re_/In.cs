@@ -20,6 +20,15 @@ namespace nilnul.set.re_
 	///				
 	/// 
 	/// </remarks>
+	/// alias:
+	///		subset
+	///		sub
+	///		inside
+	///			implies an improper(equiv) or proper subset, and correspondingly, in may means: propersubset;
+	///		in
+	///			when in is used for <see cref="_has_.HasI{T}"/>, there is no ambiguity about proper or improper;
+	///				for bound that has borders, to tell whether a member is at the border is the responsibility of the bound (a close or open bound), not the relationship;
+	///		
 	public interface InI
 	{
 	}

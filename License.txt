@@ -1,0 +1,15 @@
+Copyrighted proudly by wangyoutian@nilnul.com ;
+It's made open and with the persistence/presentation of knowledge for education in mind; To help it going forward faster, please consider donation to us;
+This software is free of charge for personal noncommercial use.
+
+For commercial supported use, licensed humbly as follows: 
+The initial 6 months are free; afterwards, the price is $1 per cpu core per month ( or $9 per cpu core per year). (Note: if a package is a unit testing, it's free - even for commercial use).
+
+--------------------------------------
+Personal noncommercial use means:
+-it's installed on computer owned by an individual person;
+-and it's not used as part of a commodity|service to sell;
+
+Commercial use means:
+- it is installed on a computer owned by an organization, not a person;
+- or it's used as part of or in the process of a commoditiy/service that is for sale;
