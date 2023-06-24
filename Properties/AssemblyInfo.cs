@@ -2,6 +2,16 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+/// <see cref="nilnul.bit"/>,
+/// and we get set, which is also three letters long, ending with "t"
+/// set is another way to embody bit;
+/// 
+/// for discrete collection, see <see cref="nilnul.collection_.discrete"/>, where collection starts with "c", the initial letter of contain, or has.
+/// for axiomatic, or any kind of collection, <see cref="nilnul.collection"/>, which has an outward interface "has", but its inner workings may be varying and we leave the inner workings as a blackbox;
+
+
+
+
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.

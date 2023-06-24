@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +26,11 @@ namespace nilnul.set.re_
 	///		
 	///		superset
 	///		supset
-	public interface ISupset
+	///		sup
+	///	vs:
+	///		consists of
+	///			all the members;
+	public interface IncI
 	{
 	}
 }
