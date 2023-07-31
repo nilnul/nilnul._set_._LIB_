@@ -1,0 +1,1126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6CA7A2B-0C48-4C15-A426-24B25FA02E05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.set</RootNamespace>
+    <AssemblyName>nilnul._set_._LIB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'git|AnyCPU'">
+    <OutputPath>bin\git\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Symbols4Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Symbol|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.230723.150942-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230728.75741-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.230728.104656-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="%28matrix\matrix\Dimension.cs" />
+    <Compile Include="%28matrix\matrix\be_\Square - 复制.cs" />
+    <Compile Include="%28matrix\matrix\be_\TwoByThree.cs" />
+    <Compile Include="%28matrix\matrix\duo\be_\SameDimension.cs" />
+    <Compile Include="%28matrix\matrix\Extensions.cs" />
+    <Compile Include="%28matrix\matrix\be\BeI - 复制.cs" />
+    <Compile Include="%28matrix\matrix\be\En - 复制.cs" />
+    <Compile Include="%28matrix\matrix\Duo.cs" />
+    <Compile Include="%28matrix\matrix\duo\BeI.cs" />
+    <Compile Include="%28matrix\matrix\duo\be_\Associable.cs" />
+    <Compile Include="%28matrix\matrix\duo_\associable\InnerProduct.cs" />
+    <Compile Include="%28matrix\matrix\FroX.cs" />
+    <Compile Include="%28matrix\matrix\fro_\Demension.cs" />
+    <Compile Include="%28matrix\matrix\fro_\Str.cs" />
+    <Compile Include="%28matrix\matrix\op_\Del.cs" />
+    <Compile Include="%28matrix\matrix\op_\Sel.cs" />
+    <Compile Include="%28matrix\matrix\str\BeI.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\Started.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\Productable.cs" />
+    <Compile Include="%28matrix\matrix\str\be_\StartedProductable.cs" />
+    <Compile Include="%28matrix\matrix\str_\startedProductable\AggregateI.cs" />
+    <Compile Include="%28matrix\matrix\str_\startedProductable\Aggregate.cs" />
+    <Compile Include="%28matrix\matrix\to_\Dim.cs" />
+    <Compile Include="%28matrix\matrix_\%28retiring\NewFolder1\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\be_\OrderTwo.cs" />
+    <Compile Include="%28matrix\matrix_\square_\of_\Bit.cs" />
+    <Compile Include="%28matrix\_matrix\Dimension.cs" />
+    <Compile Include="%28matrix\_matrix\dimension_\OfInt.cs" />
+    <Compile Include="%28partition\Partition%28T.cs" />
+    <Compile Include="%28partition\Partition.cs" />
+    <Compile Include="abgebra_\cobiop_\abel4aug_\semi4mul_\_rng\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\IDwelt.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\INonPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\IPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\plural_\xpn_\DistributiveXpn.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\Ring.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\domain_\IField.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\IDomain.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\IPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\IMonoid4mul.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\IPoly.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\monotone_\xpn_\IPoly.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\domain_\field_\xpn_\IPoly.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\domain_\xpn_\IPoly.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\domain_\_field\IAbel4nonnil8mul.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\_domain\IClosed4nonnil8mul.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\poly_\xpn_\IMonotone.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\_ring\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\IGrp4add.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\IMonoid4add.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\nondomain_\INonmonotone.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\_ring\IClosed.cs" />
+    <Compile Include="abgebra_\cobiop_\grp4add_\monoid4mul_\_ring\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\ILattice.cs" />
+    <Compile Include="abgebra_\cobiop_\IMonoid1commutive4add.cs" />
+    <Compile Include="abgebra_\cobiop_\IMonoid4add.cs" />
+    <Compile Include="abgebra_\cobiop_\monoid1commutive4add_\monoid4mul_\distributive_\_rig\IAnnillator.cs" />
+    <Compile Include="abgebra_\cobiop_\monoid4add_\commutivedadd_\monoid4mul_\distributive_\_rig\IAnnillator.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\IDemiring.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\IRig.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\IRng.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\_lattice\IClosed4either.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\_rig\IClosed4either.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\_demi\IClosed4either.cs" />
+    <Compile Include="abgebra_\ITriOp.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\ISemigroup.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\nonsemigrp_\Xpn.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\monoid_\grp_\IAbel.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\monoid_\IGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\_monoid\has_\IOmega.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\IMagma.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\INonMagma.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\ISemiGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\nonsemigrp_\IXpn.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\IMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\monoid_\grp_\xpn_\INonAbel.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\monoid_\IGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\monoid_\xpn_\INonGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\_monoid\dwelt_\xpn_\INonMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\_monoid\IDwelt.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\xpn_\INonSemigroup.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid\coerce_\OfSemi.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid_\commoid_\nongrp_\eg_\Powset9empty.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid_\commoid_\nongrp_\eg_\Powset9sect.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\ISemigroup.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\IMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\monoid_\grp_\xpn_\IPlural.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\monoid_\ICommoid.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\monoid_\IGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\monoid_\ISingleton.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\monoid_\IPlural.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\_monoid\has_\IOmega.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\magma_\semigrp_\_monoid\IDwelt.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\ISemigroup.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\IMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\monoid_\grp_\xpn_\IPlural.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\monoid_\ICommoid.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\monoid_\IGroup.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\_monoid\has_\IKernel.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\magma_\semigrp_\_monoid\IDwelt.cs" />
+    <Compile Include="Albebra.cs" />
+    <Compile Include="abgebra_\CoBiop.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\IClosed4either.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\IRing.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\IPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\IDomain.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\poly_\xpn_\IDomain.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\xpn_\INonboole.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\Semiring.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\semirng_\IRng.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\rng_\IRing.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\xpn_\INonRing.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\semirng_\xpn_\INonRng.cs" />
+    <Compile Include="abgebra_\cobiop_\IDelta9sect.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\Dwelt.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring\Complete.cs" />
+    <Compile Include="abgebra_\cobiop_\IRing.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el\re_\IInverse.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el\re_\INegation.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el_\ICore.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el_\INonCore.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el_\INonUniversal.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\el_\IUniversal.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\IElement.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\dwelt_\IClosed4either.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\IClosed4either.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\IDwelt.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\ILattice.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\single_\IRing.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\ring_\xpn_\IPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\ring_\xpn_\NonfieldXpn.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\ring_\IXpn.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\semi_\IRig.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\semi_\rig_\IWithEmptySet.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring\el\be_\Idempotent.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring\el\be_\Unipotent.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\Commutative.cs" />
+    <Compile Include="abgebra_\cobiop_\ring\Subring.cs" />
+    <Compile Include="abgebra_\cobiop_\ring\sub_\LeftIdeal.cs" />
+    <Compile Include="abgebra_\cobiop_\ring_\Domain.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\HasNilDiv.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\NilUninversible.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\Plural.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\commutative_\Nondomain.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\Doublet.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\Noncommute.cs" />
+    <Compile Include="abgebra_\cobiop_\ring_\domain_\Field.cs" />
+    <Compile Include="abgebra_\cobiop_\lattice_\Free.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring\el\be_\Nilpotent.cs" />
+    <Compile Include="abgebra_\triop_\common_\closed_\dwelt_\xpn_\INonBoole.cs" />
+    <Compile Include="abgebra_\triop_\common_\closed_\IDwelt.cs" />
+    <Compile Include="abgebra_\triop_\common_\IClosed.cs" />
+    <Compile Include="abgebra_\triop_\ICommon.cs" />
+    <Compile Include="abgebra_\cobiop_\lattice_\IBoolean.cs" />
+    <Compile Include="abgebra_\triop_\Normal.cs" />
+    <Compile Include="abgebra_\pargoid_\IUnion.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\Empty.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\Monoid.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid_\EmptyXpn.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid_\Grp.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\monoid_\grp_\Abelian.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\Rng.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\Rig.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\Ring.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\commutative_\Domain.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\ZeroOnly.cs" />
+    <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\Field.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\Rng.cs" />
+    <Compile Include="abgebra_\cobiop_\DeltaEquiv.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect\be_\Rng.cs" />
+    <Compile Include="abgebra_\pargoid_\sect_\Magma.cs" />
+    <Compile Include="abgebra_\pargoid_\union_\Magma.cs" />
+    <Compile Include="ballot_\Eq8static.cs" />
+    <Compile Include="ballot_\Eq8implict.cs" />
+    <Compile Include="be_\Comprise.cs" />
+    <Compile Include="be_\include_\Encompass.cs" />
+    <Compile Include="be_\Has.cs" />
+    <Compile Include="be_\Have.cs" />
+    <Compile Include="be_\IConstitute.cs" />
+    <Compile Include="be_\Include.cs" />
+    <Compile Include="be_\inside_\Inner.cs" />
+    <Compile Include="be_\Inside.cs" />
+    <Compile Include="be_\Singleton.cs" />
+    <Compile Include="choose_\multi_\result\count\GenFun.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\count_\InNegCombi.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\count_\Recur.cs" />
+    <Compile Include="choose_\Subset.cs" />
+    <Compile Include="choose_\multi_\Bag.cs" />
+    <Compile Include="choose_\multi_\result_\count_\fixeds\Count.cs" />
+    <Compile Include="choose_\subsets\count\SetCountNeg.cs" />
+    <Compile Include="co_\elEqSame_\xpn_\NewFolder1\EqNotSameException.cs" />
+    <Compile Include="el\be_\ElInSet.cs" />
+    <Compile Include="Enclosed.cs" />
+    <Compile Include="ExprI.cs" />
+    <Compile Include="expr\co_\ITantamount.cs" />
+    <Compile Include="expr\co_\tanta_\distributive_\ProductOfSum.cs" />
+    <Compile Include="expr\co_\tanta_\distributive_\SumOfProduct.cs" />
+    <Compile Include="expr_\call_\Nary.cs" />
+    <Compile Include="expr_\call_\Unary.cs" />
+    <Compile Include="expr_\call_\Binary.cs" />
+    <Compile Include="expr_\call_\unary_\Noop.cs" />
+    <Compile Include="expr_\call_\unary_\nop_\IOmega.cs" />
+    <Compile Include="expr_\capsule_\ISubexprSameType.cs" />
+    <Compile Include="expr_\closed_\common\_EqX.cs" />
+    <Compile Include="expr_\closed_\call\_EqX.cs" />
+    <Compile Include="expr_\closed_\CallI.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\Except.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\Delta.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\ExceptA.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\except_\Complement.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\Union.cs" />
+    <Compile Include="expr_\closed_\call_\TernaryA.cs" />
+    <Compile Include="expr_\closed_\call_\Binary.cs" />
+    <Compile Include="expr_\closed_\call_\binary_\Intersect.cs" />
+    <Compile Include="expr_\closed_\call_\ternary_\CurriableA.cs" />
+    <Compile Include="expr_\closed_\call_\ternary_\Concur.cs" />
+    <Compile Include="expr_\closed_\call_\ternary_\Neither.cs" />
+    <Compile Include="expr_\closed_\call_\Unary.cs" />
+    <Compile Include="expr_\closed_\common_\BinaryA.cs" />
+    <Compile Include="expr_\closed_\common_\binary_\ExceptA.cs" />
+    <Compile Include="expr_\closed_\common_\binary_\except_\Complement.cs" />
+    <Compile Include="expr_\closed_\common_\binary_\Union.cs" />
+    <Compile Include="expr_\closed_\common_\binary_\Intersect.cs" />
+    <Compile Include="expr_\closed_\common_\INary.cs" />
+    <Compile Include="expr_\closed_\common_\UnaryA.cs" />
+    <Compile Include="expr_\closed_\common_\unary_\INoop.cs" />
+    <Compile Include="expr_\closed_\ICall.cs" />
+    <Compile Include="expr_\closed_\ICanonic.cs" />
+    <Compile Include="expr_\closed_\INonCommon.cs" />
+    <Compile Include="expr_\closed_\IStandard.cs" />
+    <Compile Include="expr_\closed_\ICommon.cs" />
+    <Compile Include="expr_\var\sety\ballots_\ICanonic.cs" />
+    <Compile Include="expr_\var\sety\ballots_\IIsokeys.cs" />
+    <Compile Include="expr_\var\sety\ballots_\isokeys_\IDistinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\sop\_EqX.cs" />
+    <Compile Include="expr_\closed_\std_\Sop.cs" />
+    <Compile Include="expr_\closed_\std_\_sop_\ToCanonicI.cs" />
+    <Compile Include="expr_\closed_\_call_\OpI.cs" />
+    <Compile Include="expr_\closed_\_common_\ToSopI.cs" />
+    <Compile Include="expr_\closed_\_call_\ToCommon.cs" />
+    <Compile Include="expr_\Eq8implicitI.cs" />
+    <Compile Include="expr_\eq8implic_\Omega8implicI.cs" />
+    <Compile Include="expr_\Eq8static.cs" />
+    <Compile Include="expr_\eq8static_\Omega8defaultI.cs" />
+    <Compile Include="Expr.cs" />
+    <Compile Include="expr_\ICall.cs" />
+    <Compile Include="expr_\ICapsule.cs" />
+    <Compile Include="expr_\IClosed.cs" />
+    <Compile Include="expr_\var\IVote.cs" />
+    <Compile Include="expr_\var\Set.cs" />
+    <Compile Include="expr_\var\sety\Ballot.cs" />
+    <Compile Include="expr_\var\sety\ballots_\isokeys\_ParsX.cs" />
+    <Compile Include="expr_\var\sety\ballots_\isokeys_\distinct\of_\coerce_\_OfIsovarsX.cs" />
+    <Compile Include="expr_\var\sety\ballot\co_\isokeys\be_\SameVal4EachVar.cs" />
+    <Compile Include="expr_\var\sety\ballot\EqI.cs" />
+    <Compile Include="expr_\var\sety\ballot\IMaxterms.cs" />
+    <Compile Include="expr_\var\sety\ballot\IMinterms.cs" />
+    <Compile Include="expr_\var\sety\ballot\IMonomial.cs" />
+    <Compile Include="expr_\var\sety\ballot\Maxterm.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\Coefed.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\Be.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be\vow_\Be8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be_\isovars_\Distinct8inverses.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be_\isovars_\unlike\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\be_\isovars_\unlike\vow\En.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\Product.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\vow\Ee.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds\vow\en_\Vow8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds_\isovars_\Unlike.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefeds_\isovars_\unlike\Product.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\Be.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\be\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\be\vow_\Be8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\be_\Coef8nonnil.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\be_\coef8nonnil\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\be_\coef8nonnil\vow\En.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\co_\isovars_\DifInverse.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\ReI.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\re_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\re_\isovars_\DifInverses.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\vow\Ee.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\coefed\vow\en_\Vow8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\co_\isovars_\Dif.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\ICoefeds.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\ReI.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\re_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterm\re_\isovars_\Dif.cs" />
+    <Compile Include="expr_\var\sety\ballot\Minterm.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\Be.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be\vow_\Be8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be_\isovars_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be_\isovars_\distinct\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\be_\isovars_\distinct\vow\En.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\every_\Coefed.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\Product.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\sop\to_\ToCanonic.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\vow\Ee.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms\vow\en_\Vow8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\Be.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be\vow_\Be8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be_\isovars_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be_\isovars_\distinct\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\be_\isovars_\distinct\vow\En.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\every_\ICoefed.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\Sop.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\sop\IEq.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\sop\to_\ToCanonic.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\vow\Ee.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\vow\en_\Vow8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms_\distinct\IConjunct.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms_\isovars_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\maxterms_\isovars_\distinct\IProduct.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\co_\isovars\be_\SameSet.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\ICanonic.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\Canonic.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\isovars_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\ISum.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\of_\coerce_\_OfIsovarsX.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\Sum.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\sum\Eq.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\sum\eq_\ByEnrollNewVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\sum\op_\unary_\_RemoveInvariate.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\sum\pars_\ineffective\RemoveX.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\canonic\sum\par\be_\Ineffective.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms\par\RemoveX.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\Coefed.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be_\isovars_\unlike\vow\En.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefed\co_\isovars_\DifInverse.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefed\ReI.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefed\re_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefed\re_\isovars_\DifInverses.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\co_\isovars_\Dif.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\ICoefeds.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\Be.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be\vow_\Be8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be_\isovars_\Distinct.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\be_\isovars_\unlike\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\Sum.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\Vow.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\vow\Ee.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\coefeds\vow\en_\Vow8stati.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\EqI.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\ReI.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\re_\IEquiv.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\re_\IsoVars.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\re_\isovars_\Dif.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\re_\isovars_\_eq\SameVal4EachVar.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterm\Eq.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\coefed_\IMonic.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\coefed_\monic_\IMaxtermish.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\coefed_\monic_\IMintermish.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\ICoefed.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\IOp.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\op_\IUnary.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\op_\unary_\comple_\IMaxterm2minterm.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\op_\unary_\comple_\IMinterm2maxterm.cs" />
+    <Compile Include="expr_\var\sety\ballot\monomial\op_\unary_\IComplement.cs" />
+    <Compile Include="expr_\var\sety\ballot\ReI.cs" />
+    <Compile Include="expr_\var\sety\ballot\re_\EquiKeys.cs" />
+    <Compile Include="expr_\var\sety\ballot\re_\isokeys_\Dif.cs" />
+    <Compile Include="expr_\var\sety\ballot\re_\isokeys_\_eq\SameVal4EachVar.cs" />
+    <Compile Include="expr_\var\sety\ballot\Eq.cs" />
+    <Compile Include="expr_\var\sety\_EqX.cs" />
+    <Compile Include="expr_\var\valves\Product.cs" />
+    <Compile Include="expr_\var\valve\ISety.cs" />
+    <Compile Include="expr_\var\valve\phrase_\_AsNop0complementX.cs" />
+    <Compile Include="expr_\var\valve\Eq.cs" />
+    <Compile Include="expr_\var\valve\sety\IProduct.cs" />
+    <Compile Include="expr_\var_\Omega.cs" />
+    <Compile Include="expr_\VarI.cs" />
+    <Compile Include="expr_\var\sety\ballot\minterms_\distinct\Disjunct.cs" />
+    <Compile Include="expr_\_call_\OpI.cs" />
+    <Compile Include="family\Algebra.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\Rng.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng\be_\Ring.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\Ring.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\Commutative.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\be_\RingXpn.cs" />
+    <Compile Include="abgebra_\cobiop_\orand\be_\OrMonoid.cs" />
+    <Compile Include="abgebra_\cobiop_\orand_\Semiring.cs" />
+    <Compile Include="abgebra_\cobiop_\UnionInter.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\_monoid\IDwelt.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\monoid_\xpn_\NongrpXpn.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\Magma.cs" />
+    <Compile Include="abgebra_\pargoid_\Concur.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\Empty.cs" />
+    <Compile Include="abgebra_\pargoid_\concur_\magma_\semigrp_\IMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\Be%28ofFamily.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\dwelt_\Magma_byIndex.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\Magma_byIndex.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\Magma_byCombi.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\Magma.cs" />
+    <Compile Include="abgebra_\pargoid_\DeltaI.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\magma_\semigrp_\monoid_\EmptyXpn.cs" />
+    <Compile Include="abgebra_\pargoid_\delta_\magma_\semigrp_\monoid_\grp_\Abelian.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\Semigrp.cs" />
+    <Compile Include="abgebra_\cobiop_\Pseudoring.cs" />
+    <Compile Include="abgebra_\Pargoid.cs" />
+    <Compile Include="family\be_\Cover.cs" />
+    <Compile Include="family\be_\Dwelt.cs" />
+    <Compile Include="abgebra_\pargoid_\delta\be_\dwelt_\magma_\Abelian.cs" />
+    <Compile Include="family\Eq.cs" />
+    <Compile Include="family\eq_\Defaulted.cs" />
+    <Compile Include="abgebra_\IPargoid.cs" />
+    <Compile Include="family\IElement.cs" />
+    <Compile Include="family\IMember.cs" />
+    <Compile Include="family\op_\of_\constant_\Pow.cs" />
+    <Compile Include="family\op_\of_\set_\Combinate - Copy.cs" />
+    <Compile Include="family\op_\of_\set_\Combinate.cs" />
+    <Compile Include="co_\Union%28T,Eq .cs" />
+    <Compile Include="family\Be.cs" />
+    <Compile Include="family\be\Vow.cs" />
+    <Compile Include="family\be\vow_\BeDefaulted.cs" />
+    <Compile Include="family\be_\Disjoint - Copy.cs" />
+    <Compile Include="family\be_\disjoint\Vow.cs" />
+    <Compile Include="family\be_\disjoint\vow\Ee.cs" />
+    <Compile Include="family\be_\disjoint\vow\En%28T,TEq.cs" />
+    <Compile Include="family\be_\disjoint_\ByRecur.cs" />
+    <Compile Include="family\be_\disjoint_\EqDefaulted.cs" />
+    <Compile Include="family\be_\EqDefaulted.cs" />
+    <Compile Include="family\be_\Field.cs" />
+    <Compile Include="family\be_\Topo.cs" />
+    <Compile Include="family\OpI.cs" />
+    <Compile Include="family\op_\nary_\Constant.cs" />
+    <Compile Include="family\op_\nary_\Ctor.cs" />
+    <Compile Include="family\op_\of_\set_\combinate_\byLoop_\_yield\Checklist.cs" />
+    <Compile Include="family\op_\of_\set_\combinate_\ByIndex.cs" />
+    <Compile Include="abgebra_\pargoid_\Magma.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\IMonoid.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\Intersect.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar\be_\Monoid.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar_\monoid\be_\GrpXpn.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\Union.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\unionar\be_\Monoid.cs" />
+    <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\unionar_\monoid\be_\GrpXpn.cs" />
+    <Compile Include="family\Univ.cs" />
+    <Compile Include="family_\HasNoEmpty.cs" />
+    <Compile Include="family_\IInfinite.cs" />
+    <Compile Include="family_\IPartition.cs" />
+    <Compile Include="family_\IPowset.cs" />
+    <Compile Include="family_\ITopology.cs" />
+    <Compile Include="family_\lattice_\boolean\of_\partition_\Choose9union.cs" />
+    <Compile Include="family_\lattice_\IBoolean.cs" />
+    <Compile Include="family_\partition\of_\coerce_\CommonAlgebra.cs" />
+    <Compile Include="family_\partition\to_\cast_\Choose9union.cs" />
+    <Compile Include="family_\ring\of_\family_\Generate.cs" />
+    <Compile Include="family_\ring\of_\set_\PowerSet.cs" />
+    <Compile Include="family_\ring_\Sigma.cs" />
+    <Compile Include="family_\ring_\Singleton.cs" />
+    <Compile Include="family_\powset_\xpn_\IInfinity.cs" />
+    <Compile Include="Has.cs" />
+    <Compile Include="IAllot.cs" />
+    <Compile Include="IBallot.cs" />
+    <Compile Include="IExpr.cs" />
+    <Compile Include="nilnul0\set_\dwelt_\ISingleton.cs" />
+    <Compile Include="nilnul0\set_\Eq8implicit.cs" />
+    <Compile Include="nilnul0\obj\sortie\of_\unary_\IRearrange.cs" />
+    <Compile Include="nilnul0\SetI.cs" />
+    <Compile Include="nilnul0\set_\Eq8static.cs" />
+    <Compile Include="nilnul0\set_\Eq8staticI.cs" />
+    <Compile Include="nilnul0\set_\IEmpty.cs" />
+    <Compile Include="nilnul0\_set\IEq.cs" />
+    <Compile Include="nilnul0\_set_\ElEqI.cs" />
+    <Compile Include="nilnul0\_set_\elEq_\Eq8default.cs" />
+    <Compile Include="nilnul0\_set_\elEq_\OvMember.cs" />
+    <Compile Include="op\co\be_\lex_\Precedence.cs" />
+    <Compile Include="op_\binary_\except_\Complement.cs" />
+    <Compile Include="op_\binary_\union\cumulator\Cumulate.cs" />
+    <Compile Include="op_\ternary_\curriable\co\be_\lex_\Precedence.cs" />
+    <Compile Include="op_\BinaryI1.cs" />
+    <Compile Include="op_\binary\co\be_\lex_\Precedence.cs" />
+    <Compile Include="op_\binary_\concur_\IConcur1.cs" />
+    <Compile Include="op_\binary_\Except.cs" />
+    <Compile Include="op_\binary_\Intersect1.cs" />
+    <Compile Include="op_\binary_\eq8default_\Concur.cs" />
+    <Compile Include="op_\binary_\eq8default_\concur_\Omega8default.cs" />
+    <Compile Include="op_\binary_\eq8default_\Except.cs" />
+    <Compile Include="op_\binary_\eq8default_\Intersect.cs" />
+    <Compile Include="op_\binary_\eq8default_\Union.cs" />
+    <Compile Include="op_\binary_\eq8default_\Delta.cs" />
+    <Compile Include="op_\binary_\Eq8defaultI.cs" />
+    <Compile Include="op_\binary_\Union1.cs" />
+    <Compile Include="op_\ITernary.cs" />
+    <Compile Include="op_\ITernary1.cs" />
+    <Compile Include="op_\nary_\IOmega.cs" />
+    <Compile Include="op_\OfEq.cs" />
+    <Compile Include="op_\ofSeq_\binary_\Except.cs" />
+    <Compile Include="op_\ofSeq_\binary_\except_\Except.cs" />
+    <Compile Include="op_\TernaryI.cs" />
+    <Compile Include="op_\ternary_\Concur.cs" />
+    <Compile Include="op_\ternary_\IContextCurried.cs" />
+    <Compile Include="op_\ternary_\Neither.cs" />
+    <Compile Include="op_\UnaryI1.cs" />
+    <Compile Include="op_\unary_\complement_\eq8default_\Omega8default.cs" />
+    <Compile Include="op_\unary_\complement_\Eq8default.cs" />
+    <Compile Include="op_\unary_\eq8default_\Complement.cs" />
+    <Compile Include="op_\unary_\eq8default_\comple_\Omega8default.cs" />
+    <Compile Include="op_\unary_\IChoose.cs" />
+    <Compile Include="IConsist.cs" />
+    <Compile Include="IElement.cs" />
+    <Compile Include="IOf.cs" />
+    <Compile Include="nilnul0\ISet.cs" />
+    <Compile Include="nilnul0\obj\Set.cs" />
+    <Compile Include="co_\elEqSame_\xpn_\EqNotSame.cs" />
+    <Compile Include="op_\binary_\IConcur1.cs" />
+    <Compile Include="op_\NewFolder1\IBinary1.cs" />
+    <Compile Include="op_\ICommon.cs" />
+    <Compile Include="op_\INary.cs" />
+    <Compile Include="op_\IPlain.cs" />
+    <Compile Include="op_\IVec.cs" />
+    <Compile Include="Op.cs" />
+    <Compile Include="op_\binary\co_\comple_\ConcurDelta.cs" />
+    <Compile Include="op_\binary\co_\Complement.cs" />
+    <Compile Include="op_\binary\co_\Morgan.cs" />
+    <Compile Include="op_\binary_\Concur_ofComple.cs" />
+    <Compile Include="op_\binary_\concur\Cumulator.cs" />
+    <Compile Include="op_\binary_\concur\cumulator\be_\Unard.cs" />
+    <Compile Include="op_\binary_\concur\cumulator\Cumulate.cs" />
+    <Compile Include="op_\binary_\concur_\ByDuaDeltal.cs" />
+    <Compile Include="op_\binary_\except\Subsume.cs" />
+    <Compile Include="op_\binary_\sect\cascader\_CascadeX.cs" />
+    <Compile Include="op_\UnaryI.cs" />
+    <Compile Include="op_\binary_\IConcur.cs" />
+    <Compile Include="op_\binary_\Concur%28class.cs" />
+    <Compile Include="op_\IUnary.cs" />
+    <Compile Include="op_\NewFolder1\Op.cs" />
+    <Compile Include="op_\NewFolder1\Binary.cs" />
+    <Compile Include="op_\binary_\delta\cumulator\Cumulate.cs" />
+    <Compile Include="op_\binary_\Delta.cs" />
+    <Compile Include="nilnul0\set_\dwelt\family\be_\Cover.cs" />
+    <Compile Include="op_\BinaryI.cs" />
+    <Compile Include="op_\binary_\ElEqDefault.cs" />
+    <Compile Include="op_\binary_\delta_\MemberEqDefault.cs" />
+    <Compile Include="op_\binary_\IDelta.cs" />
+    <Compile Include="op_\binary_\_DeltaX.cs" />
+    <Compile Include="op_\IBinary.cs" />
+    <Compile Include="op_\unary_\Complement.cs" />
+    <Compile Include="op_\unary_\INoop.cs" />
+    <Compile Include="op_\unary_\IComplement.cs" />
+    <Compile Include="op_\unary_\EqDefaultI.cs" />
+    <Compile Include="op_\ofSeq_\BinaryI.cs" />
+    <Compile Include="op_\ofSeq_\UnaryI.cs" />
+    <Compile Include="re_\IEquiv.cs" />
+    <Compile Include="re_\IUnEquated.cs" />
+    <Compile Include="re_\sup_\ProperSubset.cs" />
+    <Compile Include="_abgebra_\Set.cs" />
+    <Compile Include="_abgebra_\Ops.cs" />
+    <Compile Include="_eq_\onSeq_\Eq8static.cs" />
+    <Compile Include="_eq_\_OnSeqX.cs" />
+    <Compile Include="_eq_\OnSeq.cs" />
+    <Compile Include="_has\Collection.cs" />
+    <Compile Include="nilnul0\_set_\Has.cs" />
+    <Compile Include="op_\binary_\delta\be_\Associative.cs" />
+    <Compile Include="op_\binary_\delta\be_\Commutative.cs" />
+    <Compile Include="op_\binary_\delta\Cumulator.cs" />
+    <Compile Include="Permutate.cs" />
+    <Compile Include="permutate_\ByLoop.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\_indexes\_next\Comparer.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\~\Indexes - 复制.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\Indexes.cs" />
+    <Compile Include="permutate_\byLoop_\_yield\_indexes\Next.cs" />
+    <Compile Include="permutate_\permutate~\ByLoop.cs" />
+    <Compile Include="permutate_\permutate~\_PermutateX - Copy.cs" />
+    <Compile Include="family\NewFolder1\Union - Copy.cs" />
+    <Compile Include="family\Sect.cs" />
+    <Compile Include="family\Unite.cs" />
+    <Compile Include="family\Vow.cs" />
+    <Compile Include="family\vow\Ee.cs" />
+    <Compile Include="family\vow\ee_\VowDefaulted.cs" />
+    <Compile Include="family_\eqDef~\Family%28T,TEq - Copy.cs" />
+    <Compile Include="family_\Ring.cs" />
+    <Compile Include="nilnul0\sets\Topo.cs" />
+    <Compile Include="nilnul0\set_\empty\members\be_\All.cs" />
+    <Compile Include="nilnul0\str\cord\Eq.cs" />
+    <Compile Include="nilnul0\str\cord\eq_\Defaulted.cs" />
+    <Compile Include="nilnul0\_set_\BlankI.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\ContainsI.cs" />
+    <Compile Include="be\adjectives1\adjectives\decorated\FiniteSet.cs" />
+    <Compile Include="be\adjectives1\adjectives\decorated\SingletonSet.cs" />
+    <Compile Include="be\adjectives1\adjectives\Empty.cs" />
+    <Compile Include="be\adjectives1\adjectives\EmptyAssert.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Assertion%28TElement,TSetSingleton.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Assertion%28TElement.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\CardinalX.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\ClassOfSets.cs" />
+    <Compile Include="combinate~\NewFolder1\Combinate.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\EmptySet%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\EmptySet.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\EmptySetI %2812%29.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\EmptyX.cs" />
+    <Compile Include="eq\Eq%28T,TEq%29.cs" />
+    <Compile Include="eq\EqContext%28T,TEq.cs" />
+    <Compile Include="eq\EqualityComparer_byFunc%28T.cs" />
+    <Compile Include="Eq.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Field.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\InductiveI.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\InfinityI.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\IsHashSet.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Literal.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\NonEmptyEnumerable%28T.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\NonEmptyX.cs" />
+    <Compile Include="%28matrix\MatrixI.cs" />
+    <Compile Include="%28matrix\matrix\BeI.cs" />
+    <Compile Include="%28matrix\matrix\be\En.cs" />
+    <Compile Include="%28matrix\matrix\be_\Duos.cs" />
+    <Compile Include="%28matrix\matrix\be_\Square.cs" />
+    <Compile Include="family_\EqDefaulted%28T,TEq.cs" />
+    <Compile Include="Family.cs" />
+    <Compile Include="nilnul0\obj\_table\Table.cs" />
+    <Compile Include="nilnul0\obj\table\Row.cs" />
+    <Compile Include="nilnul0\obj\table\Rows.cs" />
+    <Compile Include="family\be_\_DisjointX.cs" />
+    <Compile Include="nilnul0\str\Set.cs" />
+    <Compile Include="nilnul0\str\set\co\ply_\multi_\_ByX.cs" />
+    <Compile Include="nilnul0\str\set\co\ply_\_MultiX.cs" />
+    <Compile Include="nilnul0\str\set\op_\Binary.cs" />
+    <Compile Include="nilnul0\_set_\ElEqA.cs" />
+    <Compile Include="op_\binary_\Intersect.cs" />
+    <Compile Include="op_\binary_\Union.cs" />
+    <Compile Include="op_\binary_\_ExceptX.cs" />
+    <Compile Include="Phrase.cs" />
+    <Compile Include="_family_\ElEq.cs" />
+    <Compile Include="_family_\elEq\MemberEq.cs" />
+    <Compile Include="_family_\elEq_\EqDefaulted.cs" />
+    <Compile Include="permutate_\permutate~\_PermutateX.cs" />
+    <Compile Include="permutate_\permutate~\Permutate.cs" />
+    <Compile Include="re_\ISupset.cs" />
+    <Compile Include="re_\ISubset.cs" />
+    <Compile Include="re_\_disjoint_\Disjoint.cs" />
+    <Compile Include="re_\_joint_\Joint.cs" />
+    <Compile Include="aggregate_\%28retiring\Union%28T,Eq .cs" />
+    <Compile Include="aggregate_\Union.cs" />
+    <Compile Include="nilnul0\str\AggregateI.cs" />
+    <Compile Include="nilnul0\str\duo\BeI.cs" />
+    <Compile Include="nilnul0\str\duo\be_\SameLength.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\of_\bit\InnerProduct.cs" />
+    <Compile Include="%28matrix\matrix\duo_\sameDim\of_\bit\combine_\Subtract.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\Zip.cs" />
+    <Compile Include="nilnul0\str\duo_\sameLen\ZipSum.cs" />
+    <Compile Include="op_\op\BinaryI.cs" />
+    <Compile Include="op_\expr\expr\Binary.cs" />
+    <Compile Include="op_\expr\expr\BinaryI.cs" />
+    <Compile Include="op_\expr\expr\Union%28T.cs" />
+    <Compile Include="op_\expr\expr\Union2%28T,Eq .cs" />
+    <Compile Include="op_\op\SuccessorX.cs" />
+    <Compile Include="op_\op\Union%28T,Eq .cs" />
+    <Compile Include="op_\op\Union.cs" />
+    <Compile Include="op_\op\Xor.cs" />
+    <Compile Include="Partite.cs" />
+    <Compile Include="partite_\EqDefault.cs" />
+    <Compile Include="prop\Empty%28T,TEq.cs" />
+    <Compile Include="prop\Singleton.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\Recursive.cs" />
+    <Compile Include="re_\rel\Disjoint%28T,TEq.cs" />
+    <Compile Include="re_\rel\Joint%28T,TEq.cs" />
+    <Compile Include="re_\rel\ProperSubset%28T,TEq.cs" />
+    <Compile Include="re_\rel\Subset.cs" />
+    <Compile Include="re_\rel\Subset2.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set%28T,TEq%29.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetByPredicate%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\SetI2%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_ElementEqStatic%28T,TEq%29.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_hashSet%28T.cs" />
+    <Compile Include="nilnul0\set_\NewFolder1\Set_hashSetX%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Set_ofAllInstances%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Set_withStaticElementEq%28T,TEq.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\SigmaAlgebra %2821%29.cs" />
+    <Compile Include="family\be_\_disjoint_\Disjoint%28T,TEq.cs" />
+    <Compile Include="family\be_\_disjoint_\Disjoint_set%28T,TEq.cs" />
+    <Compile Include="family\PartialPartition%28T,TEq,TUniv.cs" />
+    <Compile Include="family\PartialPartition%28T,TEq.cs" />
+    <Compile Include="family\Partition%28T,TEq.cs" />
+    <Compile Include="_family_\Set%28T,TEq.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\_slew\Contain.cs" />
+    <Compile Include="_has_\Has.cs" />
+    <None Include="%28froOldPrj\%28froOldPrjSet\TostrX.cs" />
+    <Compile Include="%28froOldPrj\%28froOldPrjSet\ToStrX2.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI%28T%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\FiniteSetI_randomSelect.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\Hashset%28T%29 as FiniteSet%28T%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\HashSet%28T,IEqualityCompaer%29.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\set.Set_FroHashSet%28T%28defaultEq.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI2%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\SetI3%28T.cs" />
+    <Compile Include="nilnul0\_set_\%28set%29\Set_hashSetX%28T.cs" />
+    <Compile Include="be\adjectives1\EmptyX.cs" />
+    <Compile Include="be\adjectives1\Finite.cs" />
+    <Compile Include="be\adjectives1\Singleton.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Algebra.cs" />
+    <Compile Include="%28matrix\matrix\op_\Cast.cs" />
+    <Compile Include="%28matrix\matrix\to_\Txt.cs" />
+    <Compile Include="%28matrix\matrix_\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\Square%28T%29X.cs" />
+    <Compile Include="%28matrix\matrix_\square\Square.cs" />
+    <Compile Include="%28matrix\matrix_\square\Symmetry%28static.cs" />
+    <Compile Include="nilnul0\str\arr\Repeat.cs" />
+    <Compile Include="be\Positive%28TElement.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Class.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\ContainsI%28T%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Dict.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptyEnumerableX.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptySetI %2812%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\EmptyX.cs" />
+    <Compile Include="nilnul0\obj\seq\enumerable\be\Positive%28TElement.cs" />
+    <Compile Include="nilnul0\obj\seq\enumerable\Eq%28T,TEq.cs" />
+    <Compile Include="nilnul0\obj\seq\enumerable\Eq%28T.cs" />
+    <Compile Include="nilnul0\obj\seq\enumerable\Positive%28TElement.cs" />
+    <Compile Include="eq\NewFolder1\Equal%28nilnul.collection.cs" />
+    <Compile Include="eq\NewFolder1\Equal.cs" />
+    <Compile Include="eq\NewFolder1\EqualityComparer.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IEnumerableIndexOfExtension.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IndexSet.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\InductiveI.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\InfinityI.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\IsElementOf_Extensions %2813%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\ListX.cs" />
+    <Compile Include="%28matrix\_matrix\NewFolder1\Dimension.cs" />
+    <Compile Include="%28matrix\matrix\duo\be\Associable.cs" />
+    <Compile Include="%28matrix\matrix\IntToBoolMatrix.cs" />
+    <Compile Include="%28matrix\matrix\Matrix%28static.cs" />
+    <Compile Include="%28matrix\matrix\Matrix%28T.cs" />
+    <Compile Include="%28matrix\matrix\MatrixX.cs" />
+    <Compile Include="%28matrix\matrix\op\AllX.cs" />
+    <Compile Include="%28matrix\matrix\rel\EqX.cs" />
+    <Compile Include="%28matrix\matrix\to\RowsX.cs" />
+    <Compile Include="%28matrix\matrix\to\Txt.cs" />
+    <Compile Include="%28matrix\matrix\be_\_be\Square %28%29.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\NonEmptyEnumerable%28T.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\NonEmptyX.cs" />
+    <Compile Include="combinate~\Combinate.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\Difference %2813%29.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\DifferenceI.cs" />
+    <Compile Include="op_\expr\Union2%28T,Eq .cs" />
+    <Compile Include="op_\expr\Union2%28T.cs" />
+    <Compile Include="re_\NewFolder1\IEqual.cs" />
+    <Compile Include="op_\binary_\NewFolder1\IntersectI.cs" />
+    <Compile Include="op_\binary_\NewFolder1\Intersection.cs" />
+    <Compile Include="re_\NewFolder1\IProperSubSet.cs" />
+    <Compile Include="re_\NewFolder1\IProperSuperSet.cs" />
+    <Compile Include="re_\NewFolder1\ISuperSet %2813%29.cs" />
+    <Compile Include="op_\ProductExprI.cs" />
+    <Compile Include="op_\ProductI.cs" />
+    <Compile Include="op_\SetOpA.cs" />
+    <None Include="App.config" />
+    <None Include="op_\SigmaAlgebra.cs" />
+    <Compile Include="op_\binary_\except\NewFolder3\Subtract.cs" />
+    <Compile Include="re_\NewFolder1\SuperSet.cs" />
+    <Compile Include="op_\UnionExprI%28TElement%29.cs" />
+    <Compile Include="op_\UnionFinite.cs" />
+    <Compile Include="family\op_\of_\constant_\PowerSetX.cs" />
+    <Compile Include="prop\property1\Discrete.cs" />
+    <Compile Include="prop\property1\IContinuous.cs" />
+    <Compile Include="prop\property1\IDense.cs" />
+    <Compile Include="prop\property1\IndexSet.cs" />
+    <Compile Include="prop\property1\OrderExpr_I.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\Recursive.cs" />
+    <Compile Include="re_\Disjoint.cs" />
+    <Compile Include="re_\Joint.cs" />
+    <Compile Include="re_\sub_\ProperSubset.cs" />
+    <Compile Include="re_\relation\Subset.cs" />
+    <Compile Include="re_\ISubset%28T.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\SequenceX.cs" />
+    <Compile Include="nilnul0\obj\seq\EmptyForIEnumerable%28TElement.cs" />
+    <Compile Include="Cardinal.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\StrI.cs" />
+    <Compile Include="nilnul0\str\Duo.cs" />
+    <Compile Include="nilnul0\str\to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\TostrX.cs" />
+    <Compile Include="to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\TypeInstancesSet.cs" />
+    <Compile Include="tupl\Sum.cs" />
+    <Compile Include="tupl\to\Txt.cs" />
+    <Compile Include="%28froOldPrj\NewFolder1\X.cs" />
+    <Compile Include="%28matrix\_matrix\Promote.cs" />
+    <Compile Include="family\op_\of_\set_\Pow.cs" />
+    <Compile Include="nilnul0\str\array\X.cs" />
+    <Compile Include="Headed.cs" />
+    <Compile Include="nilnul0\_set_\%28retiring\Contain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="X.cs" />
+    <None Include="packages.config" />
+    <None Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="%28froOldPrj\.exclude\NewFolder1\" />
+    <Folder Include="%28matrix\matrix\%28retiring\" />
+    <Folder Include="%28matrix\matrix\duo_\associable\op_\" />
+    <Folder Include="%28matrix\matrix\fro_\str_\" />
+    <Folder Include="%28matrix\matrix_\square\duo\be_\" />
+    <Folder Include="%28matrix\matrix_\square\duo_\sameDim\combine_\" />
+    <Folder Include="%28matrix\matrix_\square\fro_\" />
+    <Folder Include="%28matrix\matrix_\square_\of_\bit\" />
+    <Folder Include="%28op%29\" />
+    <Folder Include="abgebra_\cobiop\be_\" />
+    <Folder Include="abgebra_\cobiop\el_\" />
+    <Folder Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\plural_\xpn_\" />
+    <Folder Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\ring_\" />
+    <Folder Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\_ring\" />
+    <Folder Include="abgebra_\cobiop_\dwelt_\" />
+    <Folder Include="abgebra_\cobiop_\lattice_\multiton_\" />
+    <Folder Include="abgebra_\cobiop_\NewFolder1\" />
+    <Folder Include="abgebra_\cobiop_\orand\el\re_\inverse\contradiction_\" />
+    <Folder Include="abgebra_\cobiop_\orand_\plural_\" />
+    <Folder Include="abgebra_\cobiop_\orand_\ring_\single_\" />
+    <Folder Include="abgebra_\cobiop_\ring\sub\" />
+    <Folder Include="abgebra_\cobiop_\ring_\domain_\field_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\denumerable_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\domain_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\nonnil_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\commutative_\domain_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\nilUninversbile\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\ring_\singular_\" />
+    <Folder Include="abgebra_\cobiop_\semi_\rng_\semiring\" />
+    <Folder Include="abgebra_\pargoid_\concur\" />
+    <Folder Include="abgebra_\pargoid_\delta_\abelian\" />
+    <Folder Include="abgebra_\pargoid_\delta_\abelian_\" />
+    <Folder Include="abgebra_\pargoid_\delta_\nonmagma_\" />
+    <Folder Include="abgebra_\pargoid_\magma\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp_\dwelt_\monoid_\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp_\monoid\el\be_\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\intersectar_\monoid\be_\field\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\monoid_\field_\" />
+    <Folder Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\unionar_\monoid\be_\field\" />
+    <Folder Include="abgebra_\pargoid_\union_\magma\el_\" />
+    <Folder Include="abgebra_\triop_\common_\closed_\dwelt\" />
+    <Folder Include="abgebra_\triop_\common_\closed_\_\" />
+    <Folder Include="be\adjectives1\decorated\" />
+    <Folder Include="calc\_phrase\combiner\" />
+    <Folder Include="calc\_phrase\op\rel_\" />
+    <Folder Include="choose_\bags\" />
+    <Folder Include="choose_\multi_\result_\count\" />
+    <Folder Include="choose_\multi_\result_\count_\fixeds\count\" />
+    <Folder Include="choose_\multi_\result_\count_\fixed\" />
+    <Folder Include="expr_\closed\" />
+    <Folder Include="expr_\closed_\call_\unary_\" />
+    <Folder Include="expr_\closed_\std_\sop\" />
+    <Folder Include="expr_\closed_\std_\sop_\" />
+    <Folder Include="expr_\closed_\std_\_pos_\" />
+    <Folder Include="expr_\closed_\_std_\" />
+    <Folder Include="expr_\eq8implic_\omega8implic_\" />
+    <Folder Include="expr_\eq8static_\omega8static_\" />
+    <Folder Include="expr_\var\map_\" />
+    <Folder Include="expr_\var\sety\ballots_\canonic\co_\isokeys\" />
+    <Folder Include="expr_\var\sety\ballots_\isokeys_\distinct\eq_\" />
+    <Folder Include="expr_\var\sety\ballot\maxterms\allot_\" />
+    <Folder Include="expr_\var\sety\ballot\maxterm\coefeds\allot_\" />
+    <Folder Include="expr_\var\sety\ballot\maxterm\coefeds_\NewFolder1\" />
+    <Folder Include="expr_\var\sety\ballot\maxterm\coefed\co_\isovars\" />
+    <Folder Include="expr_\var\sety\ballot\maxterm\co_\isovars\" />
+    <Folder Include="expr_\var\sety\ballot\minterms\allot_\" />
+    <Folder Include="expr_\var\sety\ballot\minterms\of_\" />
+    <Folder Include="expr_\var\sety\ballot\minterms\sum\" />
+    <Folder Include="expr_\var\sety\ballot\minterms_\canonic\co_\isovars\be_\be_\" />
+    <Folder Include="expr_\var\sety\ballot\minterms_\canonic\sum\co_\vars8same\be_\" />
+    <Folder Include="expr_\var\sety\ballot\minterms_\canonic\sum\var_\ineffective\" />
+    <Folder Include="expr_\var\sety\ballot\minterms_\isovars_\distinct\co_\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\coefeds\allot_\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\coefeds\sop\to_\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\coefed\co_\isovars\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\co_\isovars\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\re_\equiv_\" />
+    <Folder Include="expr_\var\sety\ballot\minterm\to_\" />
+    <Folder Include="expr_\var\sety\ballot\setta\" />
+    <Folder Include="expr_\var\sety\re_\" />
+    <Folder Include="expr_\var\sortie\allot\" />
+    <Folder Include="expr_\_closed_\" />
+    <Folder Include="family\algebra\" />
+    <Folder Include="family\be_\disjoint_\NewFolder1\" />
+    <Folder Include="family\be_\field_\" />
+    <Folder Include="family\op_\of_\ctor_\" />
+    <Folder Include="family\op_\of_\set_\combinate_\byLoop_\_yield\_checklist\" />
+    <Folder Include="family_\hasNoEmpty_\" />
+    <Folder Include="family_\ring\op_\" />
+    <Folder Include="nilnul0\obj\sets\" />
+    <Folder Include="nilnul0\obj\set\co_\" />
+    <Folder Include="nilnul0\obj\set\op_\binary\" />
+    <Folder Include="nilnul0\obj\set\op_\binary_\delta\" />
+    <Folder Include="nilnul0\obj\table\op_\" />
+    <Folder Include="nilnul0\obj\table\row\" />
+    <Folder Include="nilnul0\sets\be_\" />
+    <Folder Include="nilnul0\sets\topo\" />
+    <Folder Include="nilnul0\set_\empty\be_\" />
+    <Folder Include="nilnul0\str\echelon\" />
+    <Folder Include="nilnul0\str\of_\" />
+    <Folder Include="op_\binary\co_\comple_\concurDelta\" />
+    <Folder Include="op_\binary\co_\morgan\theorem_\" />
+    <Folder Include="op_\binary_\delta\cumulator\be_\" />
+    <Folder Include="op_\binary_\elEqDefault_\" />
+    <Folder Include="op_\binary_\except\NewFolder1\" />
+    <Folder Include="op_\binary_\except\NewFolder2\" />
+    <Folder Include="op_\binary_\sect\cumulator\" />
+    <Folder Include="op_\expr\.expr\" />
+    <Folder Include="op_\expr\expr\expr\" />
+    <Folder Include="op_\NewFolder2\" />
+    <Folder Include="op_\ternary_\curry_\" />
+    <Folder Include="op_\_binary_\" />
+    <Folder Include="op_\_unary_\" />
+    <Folder Include="structure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
