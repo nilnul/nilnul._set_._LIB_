@@ -1,4 +1,4 @@
-﻿# `nilnul._set_._LIB_`
+﻿# `nilnul set LIB`
 (codename: nilnul.\_set_.\_LIB_)
 
 Set theory, a knowledge represented in code.
