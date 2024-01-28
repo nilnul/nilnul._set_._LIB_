@@ -16,4 +16,6 @@ namespace nilnul.set.abgebra_.cobiop_
 	public interface IDelta9sect
 	{
 	}
+
+
 }

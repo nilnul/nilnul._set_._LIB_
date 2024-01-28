@@ -34,7 +34,7 @@ namespace nilnul.set.family_
 	///		not yet domain
 	///	 	
 	public interface  IRing
-		:nilnul.set.abgebra_.cobiop_.delta9sect_.rng_.IRing
+		:nilnul.set.abgebra_.cobiop_.delta9sect_.grp4aug_.monoid4mul_.IRing
 	{
 
 	}

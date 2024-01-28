@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.set.abgebra_.cobiop_.delta9sect_
+namespace nilnul.set.abgebra_.cobiop_.delta9sect_.abel4aug_.semi4mul_
 {
 	///	
 	/// <summary>
@@ -17,7 +17,7 @@ namespace nilnul.set.abgebra_.cobiop_.delta9sect_
 	/// </summary>
 	///
 
-	class Rng:IDwelt
+	class Rng:ISemi4mul,_rng.IDistributive
 	{
 	}
 

@@ -13,6 +13,9 @@ namespace nilnul.set.op_.binary_.except_
 	/// </summary>
 	/// <remarks>
 	/// when used in the expr, the beginning arg is invisible, and implicitly prescribed by the context;
+	/// so complemet looks like a <see cref="IUnary"/>, but it's not. It's binary, and one operand is contextual and implicit. As the result, in language, when we say not or antonym, the contextual implicit universal omega must be defined, otherwise a paradox such as those similar to Russell pardox might arise;
+	/// eg:
+	///		in Regex [^\w], the universe is all the unicode characters;
 	/// </remarks>
 	
 	public interface IComplement:IExcept {

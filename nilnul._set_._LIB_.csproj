@@ -181,6 +181,9 @@
     <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\domain_\IField.cs" />
     <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\IDomain.cs" />
     <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\ring_\xpn_\IPlural.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\ISemi4mul.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\_ring\IMonoid4mul.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\_rng\IDistributive.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\IMonoid4mul.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\IPoly.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\monotone_\xpn_\IPoly.cs" />
@@ -189,12 +192,15 @@
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\domain_\_field\IAbel4nonnil8mul.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\_domain\IClosed4nonnil8mul.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\poly_\xpn_\IMonotone.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\xpn_\INoPhi.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\_ring\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\delta9sect_\IAbel4aug.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\IGrp4add.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\IMonoid4add.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\grp4aug_\monoid4mul_\ring_\plural_\commutive_\nondomain_\INonmonotone.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect_\_ring\IClosed.cs" />
     <Compile Include="abgebra_\cobiop_\grp4add_\monoid4mul_\_ring\IDistributive.cs" />
+    <Compile Include="abgebra_\cobiop_\IConcur9union.cs" />
     <Compile Include="abgebra_\cobiop_\ILattice.cs" />
     <Compile Include="abgebra_\cobiop_\IMonoid1commutive4add.cs" />
     <Compile Include="abgebra_\cobiop_\IMonoid4add.cs" />
@@ -310,7 +316,7 @@
     <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\ZeroOnly.cs" />
     <Compile Include="abgebra_\cobiop_\semi_\rng_\ring_\plural_\Field.cs" />
     <Compile Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\Rng.cs" />
-    <Compile Include="abgebra_\cobiop_\DeltaEquiv.cs" />
+    <Compile Include="abgebra_\cobiop_\Delta9concur.cs" />
     <Compile Include="abgebra_\cobiop_\delta9sect\be_\Rng.cs" />
     <Compile Include="abgebra_\pargoid_\sect_\Magma.cs" />
     <Compile Include="abgebra_\pargoid_\union_\Magma.cs" />
@@ -593,6 +599,7 @@
     <Compile Include="family\Univ.cs" />
     <Compile Include="family_\HasNoEmpty.cs" />
     <Compile Include="family_\IInfinite.cs" />
+    <Compile Include="family_\IMonotonic.cs" />
     <Compile Include="family_\IPartition.cs" />
     <Compile Include="family_\IPowset.cs" />
     <Compile Include="family_\ITopology.cs" />
@@ -602,6 +609,8 @@
     <Compile Include="family_\partition\to_\cast_\Choose9union.cs" />
     <Compile Include="family_\ring\of_\family_\Generate.cs" />
     <Compile Include="family_\ring\of_\set_\PowerSet.cs" />
+    <Compile Include="family_\ring_\domain_\xpn_\IPoly.cs" />
+    <Compile Include="family_\ring_\IDomain.cs" />
     <Compile Include="family_\ring_\Sigma.cs" />
     <Compile Include="family_\ring_\Singleton.cs" />
     <Compile Include="family_\powset_\xpn_\IInfinity.cs" />
@@ -698,6 +707,8 @@
     <Compile Include="op_\ofSeq_\BinaryI.cs" />
     <Compile Include="op_\ofSeq_\UnaryI.cs" />
     <Compile Include="re_\IEquiv.cs" />
+    <Compile Include="re_\IMonotonic.cs" />
+    <Compile Include="re_\INonmonotonic.cs" />
     <Compile Include="re_\IUnEquated.cs" />
     <Compile Include="re_\sup_\ProperSubset.cs" />
     <Compile Include="_abgebra_\Set.cs" />
@@ -956,12 +967,11 @@
     <Folder Include="%28op%29\" />
     <Folder Include="abgebra_\cobiop\be_\" />
     <Folder Include="abgebra_\cobiop\el_\" />
+    <Folder Include="abgebra_\cobiop_\concur9union_\" />
     <Folder Include="abgebra_\cobiop_\delta9concur_\nonplural_\singleton_\rng_\plural_\xpn_\" />
     <Folder Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\ring_\" />
-    <Folder Include="abgebra_\cobiop_\delta9sect_\abel4aug_\semi4mul_\rng_\_ring\" />
     <Folder Include="abgebra_\cobiop_\dwelt_\" />
     <Folder Include="abgebra_\cobiop_\lattice_\multiton_\" />
-    <Folder Include="abgebra_\cobiop_\NewFolder1\" />
     <Folder Include="abgebra_\cobiop_\orand\el\re_\inverse\contradiction_\" />
     <Folder Include="abgebra_\cobiop_\orand_\plural_\" />
     <Folder Include="abgebra_\cobiop_\orand_\ring_\single_\" />
@@ -1035,6 +1045,7 @@
     <Folder Include="family\op_\of_\set_\combinate_\byLoop_\_yield\_checklist\" />
     <Folder Include="family_\hasNoEmpty_\" />
     <Folder Include="family_\ring\op_\" />
+    <Folder Include="family_\ring_\poly_\xpn_\" />
     <Folder Include="nilnul0\obj\sets\" />
     <Folder Include="nilnul0\obj\set\co_\" />
     <Folder Include="nilnul0\obj\set\op_\binary\" />

@@ -9,7 +9,7 @@
 	///	<summary>
 	///	
 	/// </summary>
-	public interface IMonoid4add { }
+	public interface IMonoid4aug { }
 
 
 }
