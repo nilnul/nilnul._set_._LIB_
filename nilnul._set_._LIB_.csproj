@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>nilnul.set</RootNamespace>
     <AssemblyName>nilnul._set_._LIB_</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -123,10 +123,10 @@
       <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.230723.150942-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.240817.162249\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230728.75741-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.240817.160302\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -137,7 +137,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.230728.104656-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.240817.153636\lib\net48\_nilnul_._LIB_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -751,7 +751,6 @@
     <Compile Include="%28froOldPrj\%28froOldPrjSet\Assertion%28TElement.cs" />
     <Compile Include="%28froOldPrj\%28froOldPrjSet\CardinalX.cs" />
     <Compile Include="%28froOldPrj\%28froOldPrjSet\ClassOfSets.cs" />
-    <Compile Include="combinate~\NewFolder1\Combinate.cs" />
     <Compile Include="nilnul0\set_\NewFolder1\EmptySet%28T.cs" />
     <Compile Include="nilnul0\set_\NewFolder1\EmptySet.cs" />
     <Compile Include="nilnul0\set_\NewFolder1\EmptySetI %2812%29.cs" />
@@ -901,7 +900,6 @@
     <Compile Include="%28matrix\matrix\be_\_be\Square %28%29.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\NonEmptyEnumerable%28T.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\NonEmptyX.cs" />
-    <Compile Include="combinate~\Combinate.cs" />
     <Compile Include="op_\binary_\except\NewFolder3\Difference %2813%29.cs" />
     <Compile Include="op_\binary_\except\NewFolder3\DifferenceI.cs" />
     <Compile Include="op_\expr\Union2%28T,Eq .cs" />
