@@ -13,4 +13,5 @@ namespace nilnul.set
 	interface IPermutate
 	{
 	}
+
 }

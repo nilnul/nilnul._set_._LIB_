@@ -569,9 +569,15 @@
     <Compile Include="abgebra_\IPargoid.cs" />
     <Compile Include="family\IElement.cs" />
     <Compile Include="family\IMember.cs" />
-    <Compile Include="family\op_\of_\constant_\Pow.cs" />
-    <Compile Include="family\op_\of_\set_\Combinate - Copy.cs" />
-    <Compile Include="family\op_\of_\set_\Combinate.cs" />
+    <Compile Include="family\of_\basis_\ICombinate.cs" />
+    <Compile Include="family\of_\basis_\Pow.cs" />
+    <Compile Include="family\of_\constant_\Pow.cs" />
+    <Compile Include="family\of_\constant_\PowerSetX.cs" />
+    <Compile Include="family\of_\IOfBasis.cs" />
+    <Compile Include="family\of_\nary_\Constant.cs" />
+    <Compile Include="family\of_\nary_\Ctor.cs" />
+    <Compile Include="family\of_\basis_\Combinate - Copy.cs" />
+    <Compile Include="family\of_\basis_\Combinate.cs" />
     <Compile Include="co_\Union%28T,Eq .cs" />
     <Compile Include="family\Be.cs" />
     <Compile Include="family\be\Vow.cs" />
@@ -586,10 +592,9 @@
     <Compile Include="family\be_\Field.cs" />
     <Compile Include="family\be_\Topo.cs" />
     <Compile Include="family\OpI.cs" />
-    <Compile Include="family\op_\nary_\Constant.cs" />
-    <Compile Include="family\op_\nary_\Ctor.cs" />
-    <Compile Include="family\op_\of_\set_\combinate_\byLoop_\_yield\Checklist.cs" />
-    <Compile Include="family\op_\of_\set_\combinate_\ByIndex.cs" />
+    <Compile Include="family\of_\basis_\combinate_\byLoop_\Slider.cs" />
+    <Compile Include="family\of_\basis_\combinate_\byLoop_\_yield\Checklist.cs" />
+    <Compile Include="family\of_\basis_\combinate_\ByIndex.cs" />
     <Compile Include="abgebra_\pargoid_\Magma.cs" />
     <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\IMonoid.cs" />
     <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\Intersect.cs" />
@@ -708,6 +713,7 @@
     <Compile Include="op_\unary_\EqDefaultI.cs" />
     <Compile Include="op_\ofSeq_\BinaryI.cs" />
     <Compile Include="op_\ofSeq_\UnaryI.cs" />
+    <Compile Include="permutate\representation_\ICycleRepresentation.cs" />
     <Compile Include="re_\IEquiv.cs" />
     <Compile Include="re_\IMonotonic.cs" />
     <Compile Include="re_\INonmonotonic.cs" />
@@ -921,7 +927,6 @@
     <Compile Include="re_\NewFolder1\SuperSet.cs" />
     <Compile Include="op_\UnionExprI%28TElement%29.cs" />
     <Compile Include="op_\UnionFinite.cs" />
-    <Compile Include="family\op_\of_\constant_\PowerSetX.cs" />
     <Compile Include="prop\property1\Discrete.cs" />
     <Compile Include="prop\property1\IContinuous.cs" />
     <Compile Include="prop\property1\IDense.cs" />
@@ -946,7 +951,6 @@
     <Compile Include="tupl\to\Txt.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\X.cs" />
     <Compile Include="%28matrix\_matrix\Promote.cs" />
-    <Compile Include="family\op_\of_\set_\Pow.cs" />
     <Compile Include="nilnul0\str\array\X.cs" />
     <Compile Include="Headed.cs" />
     <Compile Include="nilnul0\_set_\%28retiring\Contain.cs" />
@@ -1041,8 +1045,10 @@
     <Folder Include="family\algebra\" />
     <Folder Include="family\be_\disjoint_\NewFolder1\" />
     <Folder Include="family\be_\field_\" />
-    <Folder Include="family\op_\of_\ctor_\" />
-    <Folder Include="family\op_\of_\set_\combinate_\byLoop_\_yield\_checklist\" />
+    <Folder Include="family\of_\basis_\combinate_\byLoop_\_yield\_checklist\" />
+    <Folder Include="family\of_\basis_\NewFolder1\" />
+    <Folder Include="family\of_\ctor_\" />
+    <Folder Include="family\op_\of_\set_\" />
     <Folder Include="family_\hasNoEmpty_\" />
     <Folder Include="family_\ring\op_\" />
     <Folder Include="family_\ring_\poly_\xpn_\" />
@@ -1081,7 +1087,7 @@
       <Output TaskParameter="Assemblies" ItemName="Targets" />
     </GetAssemblyIdentity>
     <ItemGroup>
-      <VersionNumber Include="@(Targets-&gt;'%(Version)')" />
+      <VersionNumber Include="@(Targets->'%(Version)')" />
       <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
     </ItemGroup>
   </Target>

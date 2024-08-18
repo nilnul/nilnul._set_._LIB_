@@ -10,9 +10,17 @@ using System.Threading.Tasks;
 
 namespace nilnul.set.permutate_.byLoop_._yield._indexes
 {
+	/// newsmth.net/nForum/#!article/Programming/214984
+	///类似地，也可以写 n 个元素中取 k 个的下一种组合取法的函数。这个也不难，和写带进位的大整数加法有点像：假定取出的数升序排列，尽量给末位加1；如果不能加就试试加前面一位的，进位后就把后面的所有位恢复最小序。
+	///你写几个例子看看就能自己写出来。
+	/// 网上搜 next combination 也能找到现成代码
+	/// 	/// 排列生成你可以看 C++ 的 std::next_permutation 实现，从一个排列生成字典序的下一个排列，也不复杂。
+
+
 	/*
 	take an permuation itself as state; and infer next permutation.
 	 */
+
 
 	/// <summary>
 	/// </summary>
@@ -154,7 +162,7 @@ The startIndex parameter can range from 0 to the length of the string instance. 
 			}
 			///for 0, we find no larger number to the right.
 			///So every number has no larger number.
-			///We are alread at "5,4,3,2,1,0"
+			///We are already at "5,4,3,2,1,0"
 			return false;
 
 		}
