@@ -123,12 +123,10 @@
       <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.240817.162249\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
-      <Aliases>global,bit</Aliases>
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.250106.73702\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.240817.160302\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
-      <Aliases>global,obj</Aliases>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.250101.144859\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -139,7 +137,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.240817.153636\lib\net48\_nilnul_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.241016.32119\lib\net48\_nilnul_._LIB_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +341,10 @@
     <Compile Include="co_\elEqSame_\xpn_\NewFolder1\EqNotSameException.cs" />
     <Compile Include="el\be_\ElInSet.cs" />
     <Compile Include="Enclosed.cs" />
+    <Compile Include="Eq1.cs" />
+    <Compile Include="EqI1.cs" />
+    <Compile Include="EqualsX.cs" />
+    <Compile Include="eq_\ElEqAsDefaulted.cs" />
     <Compile Include="ExprI.cs" />
     <Compile Include="expr\co_\ITantamount.cs" />
     <Compile Include="expr\co_\tanta_\distributive_\ProductOfSum.cs" />
@@ -568,6 +570,7 @@
     <Compile Include="family\eq_\Defaulted.cs" />
     <Compile Include="abgebra_\IPargoid.cs" />
     <Compile Include="family\IElement.cs" />
+    <Compile Include="family\IGregate.cs" />
     <Compile Include="family\IMember.cs" />
     <Compile Include="family\of_\basis_\ICombinate.cs" />
     <Compile Include="family\of_\basis_\Pow.cs" />
@@ -603,6 +606,7 @@
     <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\Union.cs" />
     <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\unionar\be_\Monoid.cs" />
     <Compile Include="abgebra_\pargoid_\magma_\semigrp_\semigrp_\unionar_\monoid\be_\GrpXpn.cs" />
+    <Compile Include="family\to_\IToSet.cs" />
     <Compile Include="family\Univ.cs" />
     <Compile Include="family_\HasNoEmpty.cs" />
     <Compile Include="family_\IInfinite.cs" />
@@ -624,6 +628,8 @@
     <Compile Include="Has.cs" />
     <Compile Include="IAllot.cs" />
     <Compile Include="IBallot.cs" />
+    <Compile Include="IEq.cs" />
+    <Compile Include="IEq1.cs" />
     <Compile Include="IExpr.cs" />
     <Compile Include="nilnul0\set_\dwelt_\ISingleton.cs" />
     <Compile Include="nilnul0\set_\Eq8implicit.cs" />
@@ -636,23 +642,24 @@
     <Compile Include="nilnul0\_set_\ElEqI.cs" />
     <Compile Include="nilnul0\_set_\elEq_\Eq8default.cs" />
     <Compile Include="nilnul0\_set_\elEq_\OvMember.cs" />
+    <Compile Include="nilnul0\_set_\el\HashCode.cs" />
     <Compile Include="op\co\be_\lex_\Precedence.cs" />
-    <Compile Include="op_\binary_\except_\Complement.cs" />
-    <Compile Include="op_\binary_\union\cumulator\Cumulate.cs" />
+    <Compile Include="bi_\except_\Complement.cs" />
+    <Compile Include="bi_\union\cumulator\Cumulate.cs" />
     <Compile Include="op_\ternary_\curriable\co\be_\lex_\Precedence.cs" />
     <Compile Include="op_\BinaryI1.cs" />
-    <Compile Include="op_\binary\co\be_\lex_\Precedence.cs" />
-    <Compile Include="op_\binary_\concur_\IConcur1.cs" />
-    <Compile Include="op_\binary_\Except.cs" />
-    <Compile Include="op_\binary_\Intersect1.cs" />
-    <Compile Include="op_\binary_\eq8default_\Concur.cs" />
-    <Compile Include="op_\binary_\eq8default_\concur_\Omega8default.cs" />
-    <Compile Include="op_\binary_\eq8default_\Except.cs" />
-    <Compile Include="op_\binary_\eq8default_\Intersect.cs" />
-    <Compile Include="op_\binary_\eq8default_\Union.cs" />
-    <Compile Include="op_\binary_\eq8default_\Delta.cs" />
-    <Compile Include="op_\binary_\Eq8defaultI.cs" />
-    <Compile Include="op_\binary_\Union1.cs" />
+    <Compile Include="binary\co\be_\lex_\Precedence.cs" />
+    <Compile Include="bi_\concur_\IConcur1.cs" />
+    <Compile Include="bi_\Except.cs" />
+    <Compile Include="bi_\Intersect1.cs" />
+    <Compile Include="bi_\eq8default_\Concur.cs" />
+    <Compile Include="bi_\eq8default_\concur_\Omega8default.cs" />
+    <Compile Include="bi_\eq8default_\Except.cs" />
+    <Compile Include="bi_\eq8default_\Intersect.cs" />
+    <Compile Include="bi_\eq8default_\Union.cs" />
+    <Compile Include="bi_\eq8default_\Delta.cs" />
+    <Compile Include="bi_\Eq8defaultI.cs" />
+    <Compile Include="bi_\Union1.cs" />
     <Compile Include="op_\ITernary.cs" />
     <Compile Include="op_\ITernary1.cs" />
     <Compile Include="op_\nary_\IOmega.cs" />
@@ -675,37 +682,37 @@
     <Compile Include="nilnul0\ISet.cs" />
     <Compile Include="nilnul0\obj\Set.cs" />
     <Compile Include="co_\elEqSame_\xpn_\EqNotSame.cs" />
-    <Compile Include="op_\binary_\IConcur1.cs" />
+    <Compile Include="bi_\IConcur1.cs" />
     <Compile Include="op_\NewFolder1\IBinary1.cs" />
     <Compile Include="op_\ICommon.cs" />
     <Compile Include="op_\INary.cs" />
     <Compile Include="op_\IPlain.cs" />
     <Compile Include="op_\IVec.cs" />
     <Compile Include="Op.cs" />
-    <Compile Include="op_\binary\co_\comple_\ConcurDelta.cs" />
-    <Compile Include="op_\binary\co_\Complement.cs" />
-    <Compile Include="op_\binary\co_\Morgan.cs" />
-    <Compile Include="op_\binary_\Concur_ofComple.cs" />
-    <Compile Include="op_\binary_\concur\Cumulator.cs" />
-    <Compile Include="op_\binary_\concur\cumulator\be_\Unard.cs" />
-    <Compile Include="op_\binary_\concur\cumulator\Cumulate.cs" />
-    <Compile Include="op_\binary_\concur_\ByDuaDeltal.cs" />
-    <Compile Include="op_\binary_\except\Subsume.cs" />
-    <Compile Include="op_\binary_\sect\cascader\_CascadeX.cs" />
+    <Compile Include="binary\co_\comple_\ConcurDelta.cs" />
+    <Compile Include="binary\co_\Complement.cs" />
+    <Compile Include="binary\co_\Morgan.cs" />
+    <Compile Include="bi_\Concur_ofComple.cs" />
+    <Compile Include="bi_\concur\Cumulator.cs" />
+    <Compile Include="bi_\concur\cumulator\be_\Unard.cs" />
+    <Compile Include="bi_\concur\cumulator\Cumulate.cs" />
+    <Compile Include="bi_\concur_\ByDuaDeltal.cs" />
+    <Compile Include="bi_\except\Subsume.cs" />
+    <Compile Include="bi_\sect\cascader\_CascadeX.cs" />
     <Compile Include="op_\UnaryI.cs" />
-    <Compile Include="op_\binary_\IConcur.cs" />
-    <Compile Include="op_\binary_\Concur%28class.cs" />
+    <Compile Include="bi_\IConcur.cs" />
+    <Compile Include="bi_\Concur%28class.cs" />
     <Compile Include="op_\IUnary.cs" />
     <Compile Include="op_\NewFolder1\Op.cs" />
     <Compile Include="op_\NewFolder1\Binary.cs" />
-    <Compile Include="op_\binary_\delta\cumulator\Cumulate.cs" />
-    <Compile Include="op_\binary_\Delta.cs" />
+    <Compile Include="bi_\delta\cumulator\Cumulate.cs" />
+    <Compile Include="bi_\Delta.cs" />
     <Compile Include="nilnul0\set_\dwelt\family\be_\Cover.cs" />
     <Compile Include="op_\BinaryI.cs" />
-    <Compile Include="op_\binary_\ElEqDefault.cs" />
-    <Compile Include="op_\binary_\delta_\MemberEqDefault.cs" />
-    <Compile Include="op_\binary_\IDelta.cs" />
-    <Compile Include="op_\binary_\_DeltaX.cs" />
+    <Compile Include="bi_\ElEqDefault.cs" />
+    <Compile Include="bi_\delta_\MemberEqDefault.cs" />
+    <Compile Include="bi_\IDelta.cs" />
+    <Compile Include="bi_\_DeltaX.cs" />
     <Compile Include="op_\IBinary.cs" />
     <Compile Include="op_\unary_\Complement.cs" />
     <Compile Include="op_\unary_\INoop.cs" />
@@ -726,9 +733,9 @@
     <Compile Include="_eq_\OnSeq.cs" />
     <Compile Include="_has\Collection.cs" />
     <Compile Include="nilnul0\_set_\Has.cs" />
-    <Compile Include="op_\binary_\delta\be_\Associative.cs" />
-    <Compile Include="op_\binary_\delta\be_\Commutative.cs" />
-    <Compile Include="op_\binary_\delta\Cumulator.cs" />
+    <Compile Include="bi_\delta\be_\Associative.cs" />
+    <Compile Include="bi_\delta\be_\Commutative.cs" />
+    <Compile Include="bi_\delta\Cumulator.cs" />
     <Compile Include="Permutate.cs" />
     <Compile Include="permutate_\ByLoop.cs" />
     <Compile Include="permutate_\byLoop_\_yield\_indexes\_next\Comparer.cs" />
@@ -738,8 +745,8 @@
     <Compile Include="permutate_\permutate~\ByLoop.cs" />
     <Compile Include="permutate_\permutate~\_PermutateX - Copy.cs" />
     <Compile Include="family\NewFolder1\Union - Copy.cs" />
-    <Compile Include="family\Sect.cs" />
-    <Compile Include="family\Unite.cs" />
+    <Compile Include="family\gregate_\_CrossX.cs" />
+    <Compile Include="family\gregate_\Unite.cs" />
     <Compile Include="family\Vow.cs" />
     <Compile Include="family\vow\Ee.cs" />
     <Compile Include="family\vow\ee_\VowDefaulted.cs" />
@@ -763,9 +770,9 @@
     <Compile Include="nilnul0\set_\NewFolder1\EmptySet.cs" />
     <Compile Include="nilnul0\set_\NewFolder1\EmptySetI %2812%29.cs" />
     <Compile Include="%28froOldPrj\%28froOldPrjSet\EmptyX.cs" />
-    <Compile Include="eq\Eq%28T,TEq%29.cs" />
-    <Compile Include="eq\EqContext%28T,TEq.cs" />
-    <Compile Include="eq\EqualityComparer_byFunc%28T.cs" />
+    <Compile Include="eq_\NewFolder1\Eq%28T,TEq%29.cs" />
+    <Compile Include="eq_\NewFolder1\EqContext%28T,TEq.cs" />
+    <Compile Include="eq_\NewFolder1\EqualityComparer_byFunc%28T.cs" />
     <Compile Include="Eq.cs" />
     <Compile Include="%28froOldPrj\%28froOldPrjSet\Field.cs" />
     <Compile Include="%28froOldPrj\%28froOldPrjSet\InductiveI.cs" />
@@ -790,9 +797,9 @@
     <Compile Include="nilnul0\str\set\co\ply_\_MultiX.cs" />
     <Compile Include="nilnul0\str\set\op_\Binary.cs" />
     <Compile Include="nilnul0\_set_\ElEqA.cs" />
-    <Compile Include="op_\binary_\Intersect.cs" />
-    <Compile Include="op_\binary_\Union.cs" />
-    <Compile Include="op_\binary_\_ExceptX.cs" />
+    <Compile Include="bi_\Intersect.cs" />
+    <Compile Include="bi_\Union.cs" />
+    <Compile Include="bi_\_ExceptX.cs" />
     <Compile Include="Phrase.cs" />
     <Compile Include="_family_\ElEq.cs" />
     <Compile Include="_family_\elEq\MemberEq.cs" />
@@ -886,9 +893,9 @@
     <Compile Include="nilnul0\obj\seq\enumerable\Eq%28T,TEq.cs" />
     <Compile Include="nilnul0\obj\seq\enumerable\Eq%28T.cs" />
     <Compile Include="nilnul0\obj\seq\enumerable\Positive%28TElement.cs" />
-    <Compile Include="eq\NewFolder1\Equal%28nilnul.collection.cs" />
-    <Compile Include="eq\NewFolder1\Equal.cs" />
-    <Compile Include="eq\NewFolder1\EqualityComparer.cs" />
+    <Compile Include="eq_\NewFolder1\NewFolder1\Equal%28nilnul.collection.cs" />
+    <Compile Include="eq_\NewFolder1\NewFolder1\Equal.cs" />
+    <Compile Include="eq_\NewFolder1\NewFolder1\EqualityComparer.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\IEnumerableIndexOfExtension.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\IndexSet.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\InductiveI.cs" />
@@ -908,13 +915,13 @@
     <Compile Include="%28matrix\matrix\be_\_be\Square %28%29.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\NonEmptyEnumerable%28T.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\NonEmptyX.cs" />
-    <Compile Include="op_\binary_\except\NewFolder3\Difference %2813%29.cs" />
-    <Compile Include="op_\binary_\except\NewFolder3\DifferenceI.cs" />
+    <Compile Include="bi_\except\NewFolder3\Difference %2813%29.cs" />
+    <Compile Include="bi_\except\NewFolder3\DifferenceI.cs" />
     <Compile Include="op_\expr\Union2%28T,Eq .cs" />
     <Compile Include="op_\expr\Union2%28T.cs" />
     <Compile Include="re_\NewFolder1\IEqual.cs" />
-    <Compile Include="op_\binary_\NewFolder1\IntersectI.cs" />
-    <Compile Include="op_\binary_\NewFolder1\Intersection.cs" />
+    <Compile Include="bi_\NewFolder1\IntersectI.cs" />
+    <Compile Include="bi_\NewFolder1\Intersection.cs" />
     <Compile Include="re_\NewFolder1\IProperSubSet.cs" />
     <Compile Include="re_\NewFolder1\IProperSuperSet.cs" />
     <Compile Include="re_\NewFolder1\ISuperSet %2813%29.cs" />
@@ -923,7 +930,7 @@
     <Compile Include="op_\SetOpA.cs" />
     <None Include="App.config" />
     <None Include="op_\SigmaAlgebra.cs" />
-    <Compile Include="op_\binary_\except\NewFolder3\Subtract.cs" />
+    <Compile Include="bi_\except\NewFolder3\Subtract.cs" />
     <Compile Include="re_\NewFolder1\SuperSet.cs" />
     <Compile Include="op_\UnionExprI%28TElement%29.cs" />
     <Compile Include="op_\UnionFinite.cs" />
@@ -934,7 +941,7 @@
     <Compile Include="prop\property1\OrderExpr_I.cs" />
     <Compile Include="%28froOldPrj\NewFolder1\Recursive.cs" />
     <Compile Include="re_\Disjoint.cs" />
-    <Compile Include="re_\Joint.cs" />
+    <Compile Include="re_\_JointX.cs" />
     <Compile Include="re_\sub_\ProperSubset.cs" />
     <Compile Include="re_\relation\Subset.cs" />
     <Compile Include="re_\ISubset%28T.cs" />
@@ -1003,12 +1010,20 @@
     <Folder Include="abgebra_\triop_\common_\closed_\dwelt\" />
     <Folder Include="abgebra_\triop_\common_\closed_\_\" />
     <Folder Include="be\adjectives1\decorated\" />
+    <Folder Include="binary\co_\comple_\concurDelta\" />
+    <Folder Include="binary\co_\morgan\theorem_\" />
+    <Folder Include="bi_\delta\cumulator\be_\" />
+    <Folder Include="bi_\elEqDefault_\" />
+    <Folder Include="bi_\except\NewFolder1\" />
+    <Folder Include="bi_\except\NewFolder2\" />
+    <Folder Include="bi_\sect\cumulator\" />
     <Folder Include="calc\_phrase\combiner\" />
     <Folder Include="calc\_phrase\op\rel_\" />
     <Folder Include="choose_\bags\" />
     <Folder Include="choose_\multi_\result_\count\" />
     <Folder Include="choose_\multi_\result_\count_\fixeds\count\" />
     <Folder Include="choose_\multi_\result_\count_\fixed\" />
+    <Folder Include="eq\" />
     <Folder Include="expr_\closed\" />
     <Folder Include="expr_\closed_\call_\unary_\" />
     <Folder Include="expr_\closed_\std_\sop\" />
@@ -1049,6 +1064,7 @@
     <Folder Include="family\of_\basis_\NewFolder1\" />
     <Folder Include="family\of_\ctor_\" />
     <Folder Include="family\op_\of_\set_\" />
+    <Folder Include="family\to_\cast_\" />
     <Folder Include="family_\hasNoEmpty_\" />
     <Folder Include="family_\ring\op_\" />
     <Folder Include="family_\ring_\poly_\xpn_\" />
@@ -1063,20 +1079,13 @@
     <Folder Include="nilnul0\set_\empty\be_\" />
     <Folder Include="nilnul0\str\echelon\" />
     <Folder Include="nilnul0\str\of_\" />
-    <Folder Include="op_\binary\co_\comple_\concurDelta\" />
-    <Folder Include="op_\binary\co_\morgan\theorem_\" />
-    <Folder Include="op_\binary_\delta\cumulator\be_\" />
-    <Folder Include="op_\binary_\elEqDefault_\" />
-    <Folder Include="op_\binary_\except\NewFolder1\" />
-    <Folder Include="op_\binary_\except\NewFolder2\" />
-    <Folder Include="op_\binary_\sect\cumulator\" />
     <Folder Include="op_\expr\.expr\" />
     <Folder Include="op_\expr\expr\expr\" />
     <Folder Include="op_\NewFolder2\" />
     <Folder Include="op_\ternary_\curry_\" />
-    <Folder Include="op_\_binary_\" />
     <Folder Include="op_\_unary_\" />
     <Folder Include="structure\" />
+    <Folder Include="_binary_\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="License.txt" Pack="true" PackagePath="" />
@@ -1110,13 +1119,15 @@
     <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
 if $(ConfigurationName) == Release (
 	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
-	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
 	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget
 ) ELSE (
 	if  $(ConfigurationName)==Symbol (
 		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source nuget
 	)
 	if  $(ConfigurationName)==Nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
@@ -1128,6 +1139,7 @@ if $(ConfigurationName) == Release (
 	)
 	if  $(ConfigurationName)==Sym2nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source local
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
 	)

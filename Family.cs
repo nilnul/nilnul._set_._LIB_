@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +8,14 @@ using nilnul.obj;
 namespace nilnul.set
 {
 	/// <summary>
+	/// set of sets; but to avoid repetitiveness, we call it familtyl
+	/// </summary>
+	/// <remarks>
 	/// obj comprises set; set comprises family.
 	/// members are sets; the member of member is called element
-	/// </summary>
+	///
+	/// </remarks>
+	/// 
 	public interface IFamily {
 
 	}

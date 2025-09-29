@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using nilnul.collection.set.op.expr;
 namespace nilnul.collection.set.s
 {
 
-	public partial class Partition<T, TEq>
+	public  class Partition<T, TEq>
 		where TEq : IEqualityComparer<T>, new()
 	{
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,7 @@ namespace nilnul.set
 	///		element
 	///		el
 	///			,like ee, en,ed, er, eg,
+	///		component
 	internal class IElement
 	{
 	}
